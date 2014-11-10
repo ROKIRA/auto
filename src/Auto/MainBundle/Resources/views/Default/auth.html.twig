@@ -1,0 +1,41 @@
+
+<section class="auth_form auth">
+    {% if app.session.get('user_name') %}
+        <p>Добро пожаловать, <span>{{ app.session.get('user_name') }}</span></p>
+        <p><a href="{{ path('cabinet') }}" id="goto_cabinet">Кабинет</a></p>
+        <p><a href="/logout" id="logout">Выйти</a></p>
+    {% else %}
+        <p id="auth">
+            <a href="#" id="auth_enter">Войти</a>
+            или
+            <a href="#">Зарегестрироваться</a>
+        </p>
+        <section  id="auth_form">
+            <div class="auth_form_header"><h3>Авторизация</h3><p id="auth_form_close">X</p></div>
+            
+            <form action="{{ path('auth') }}" method="post" {{ form_enctype(auth_form) }}>
+
+                {% if(form_errors(auth_form.email)) %}
+                    <div class="error">{{ form_errors(auth_form.email) }}</div>
+                {% endif %}
+                {{ form_label(auth_form.email) }}
+                {{ form_widget(auth_form.email) }}
+
+                {% if(form_errors(auth_form.password)) %}
+                    <div class="error">{{ form_errors(auth_form.password) }}</div>
+                {% endif %}
+                {{ form_label(auth_form.password) }}
+                {{ form_widget(auth_form.password) }}
+
+                <input type="submit" value="Войти" />
+            </form>
+                
+            <p><a href="{{ path('reg') }}">Зарегестрироваться</a></p>
+        
+        </section>
+
+    {% endif %}
+
+</section>
+<br class="clear"/>
+
