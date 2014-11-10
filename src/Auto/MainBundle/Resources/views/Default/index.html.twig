@@ -5,7 +5,7 @@
             <div class="content homepage">
 
                 {% block filter %}
-                    <div class="filter">
+                    <div class="filter gradient_blue">
                         <form action="{{ path('filter_auto') }}" method="post" {{ form_enctype(form_filter) }} class="filter_form">
                             <div class="fields">
 
@@ -39,20 +39,22 @@
                                 </div>
 
                                 <div class="filter-field-small">
-                                    <h4>Цена:</h4>
-                                    {{ form_errors(form_filter.price_from) }}
-                                    {{ form_widget(form_filter.price_from, { 'attr': {'placeholder': 'От', 'name': 'price_from' } } ) }}
+                                    <div>
+                                        <h4>Цена:</h4>
+                                        {{ form_errors(form_filter.price_from) }}
+                                        {{ form_widget(form_filter.price_from, { 'attr': {'placeholder': 'От', 'name': 'price_from' } } ) }}
 
-                                    {{ form_errors(form_filter.price_to) }}
-                                    {{ form_widget(form_filter.price_to, { 'attr': {'placeholder': 'до', 'name': 'price_to'} } ) }}
+                                        {{ form_errors(form_filter.price_to) }}
+                                        {{ form_widget(form_filter.price_to, { 'attr': {'placeholder': 'до', 'name': 'price_to'} } ) }}
+                                    </div>
+                                    <div>
+                                        <h4>Год выпуска:</h4>
+                                        {{ form_errors(form_filter.year_from) }}
+                                        {{ form_widget(form_filter.year_from, { 'attr': {'placeholder': 'С', 'name': 'year_from' } } ) }}
 
-                                    <h4>Год выпуска:</h4>
-                                    {{ form_errors(form_filter.year_from) }}
-                                    {{ form_widget(form_filter.year_from, { 'attr': {'placeholder': 'С', 'name': 'year_from' } } ) }}
-
-                                    {{ form_errors(form_filter.year_to) }}
-                                    {{ form_widget(form_filter.year_to, { 'attr': {'placeholder': 'по', 'name': 'year_to'} } ) }}
-
+                                        {{ form_errors(form_filter.year_to) }}
+                                        {{ form_widget(form_filter.year_to, { 'attr': {'placeholder': 'по', 'name': 'year_to'} } ) }}
+                                    </div>
                                 </div>
                             </div>
                             {{ form_errors(form_filter.photo) }}

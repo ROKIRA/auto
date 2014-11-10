@@ -11,11 +11,15 @@
                 <div class="slide active_slide new_slide new_active_slide" data-page="1">
                     <div class="large_car">
                         <a href="/auto/{{ slider_new[0].id }}/{{ slider_new[0].mark }}-{{ slider_new[0].model }}"><img src="{{ asset('bundles/auto/userfiles/') }}{{ slider_new[0].img }}" alt="{{ slider_new[0].model }}" /></a>
-                        <p class="carname">{#<a href="/Symfony/web/app_dev.php/auto/{{ slider_new[0].id }}/{{ slider_new[0].mark }}-{{ slider_new[0].model }}">#}<span class="auto_field_name">Марка:</span> <span class="car_mark">{{ slider_new[0].mark }}</span>{#</a>#}</p>
-                        <p class="carname"><span class="auto_field_name">Модель:</span> <span class="car_model">{{ slider_new[0].model }}</span></p>
-                        <p class="caryear"><span class="auto_field_name">Год выпуска:</span> <span class="car_year">{{ slider_new[0].year }}</span></p>
-                        <p class="carrun"><span class="auto_field_name">Пробег:</span> <span class="car_run">{{ slider_new[0].run|number_format(0, '.', ' ') }} км</span></p>
-                        <p class="carprice"><span class="auto_field_name">Цена:</span> <span class="car_price">{{ slider_new[0].price|number_format(0, '.', ' ') }} грн</span></p>
+                        <div>
+                            <p class="carname">{#<a href="/Symfony/web/app_dev.php/auto/{{ slider_new[0].id }}/{{ slider_new[0].mark }}-{{ slider_new[0].model }}">#}<span class="auto_field_name">Марка:</span> <span class="car_mark">{{ slider_new[0].mark }}</span>{#</a>#}</p>
+                            <p class="carname"><span class="auto_field_name">Модель:</span> <span class="car_model">{{ slider_new[0].model }}</span></p>
+                            <p class="caryear"><span class="auto_field_name">Год выпуска:</span> <span class="car_year">{{ slider_new[0].year }}</span></p>
+                        </div>
+                        <div>
+                            <p class="carrun"><span class="auto_field_name">Пробег:</span> <span class="car_run">{{ slider_new[0].run|number_format(0, '.', ' ') }} км</span></p>
+                            <p class="carprice"><span class="auto_field_name">Цена:</span> <span class="car_price">{{ slider_new[0].price|number_format(0, '.', ' ') }} грн</span></p>
+                        </div>
                     </div>
                     <div class="mini_slider new_mini_slider">
                         <div class="previous_car"></div>
@@ -51,11 +55,15 @@
                 <div class="slide active_slide bu_slide bu_active_slide" data-page="1">
                         <div class="large_car">
                             <a href="/auto/{{ slider_bu[0].id }}/{{ slider_bu[0].mark }}-{{ slider_bu[0].model }}"><img src="{{ asset('bundles/auto/userfiles/') }}{{ slider_bu[0].img }}" alt="{{ slider_bu[0].model }}" /></a>
-                            <p class="carname">{#<a href="/Symfony/web/app_dev.php/auto/{{ slider_bu[0].id }}/{{ slider_bu[0].mark }}-{{ slider_bu[0].model }}">#}<span class="auto_field_name">Марка:</span> <span class="car_mark">{{ slider_bu[0].mark }}</span>{#</a>#}</p>
-                            <p class="carname"><span class="auto_field_name">Модель:</span> <span class="car_model">{{ slider_bu[0].model }}</span></p>
-                            <p class="caryear"><span class="auto_field_name">Год выпуска:</span> <span class="car_year">{{ slider_bu[0].year }}</span></p>
-                            <p class="carrun"><span class="auto_field_name">Пробег:</span> <span class="car_run">{{ slider_bu[0].run|number_format(0, '.', ' ') }} км</span></p>
-                            <p class="carprice"><span class="auto_field_name">Цена:</span> <span class="car_price">{{ slider_bu[0].price|number_format(0, '.', ' ') }} грн</span></p>
+                            <div>
+                                <p class="carname">{#<a href="/Symfony/web/app_dev.php/auto/{{ slider_bu[0].id }}/{{ slider_bu[0].mark }}-{{ slider_bu[0].model }}">#}<span class="auto_field_name">Марка:</span> <span class="car_mark">{{ slider_bu[0].mark }}</span>{#</a>#}</p>
+                                <p class="carname"><span class="auto_field_name">Модель:</span> <span class="car_model">{{ slider_bu[0].model }}</span></p>
+                                <p class="caryear"><span class="auto_field_name">Год выпуска:</span> <span class="car_year">{{ slider_bu[0].year }}</span></p>
+                            </div>
+                            <div>
+                                <p class="carrun"><span class="auto_field_name">Пробег:</span> <span class="car_run">{{ slider_bu[0].run|number_format(0, '.', ' ') }} км</span></p>
+                                <p class="carprice"><span class="auto_field_name">Цена:</span> <span class="car_price">{{ slider_bu[0].price|number_format(0, '.', ' ') }} грн</span></p>
+                            </div>
                         </div>
                         <div class="mini_slider bu_mini_slider">
                             <div class="previous_car"></div>
