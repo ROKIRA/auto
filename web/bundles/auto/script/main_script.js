@@ -585,7 +585,7 @@ $(document).ready(function(){
             new_main_block.find('.car_price').text(price);
         });
 
-    /* ADD COMMENT */
+    /* ADD COMMENT **************************************************************/
     var comments = $("#comments");
 
     comments.on('click', 'input[type=submit]', function(e){
@@ -619,7 +619,7 @@ $(document).ready(function(){
                 text: text
             },
             function(response){
-                if(response.code == 100 && response.success){ //dummy check
+                if(response.code == 100 && response.success){ 
                     var datalevel = ++level;
                     var html ='';
                     if(parent_id != 0){
@@ -639,7 +639,8 @@ $(document).ready(function(){
                     html += '<p>' + response.text + '</p>';
                     html += '</div></div>';
                     if(level < 4){
-                        html += '<a class="comment_answer" href="#">Ответить</a>';
+                        html += '<a class="comment_answer" href="#">Ответить</a>\n\
+                                 <a href="#" class="comment_delete">Удалить</a>';
                     }
                     html += '</div>';
 
@@ -654,29 +655,7 @@ $(document).ready(function(){
 
     });
 
-    // ADD COMENT - ANSWER
-    comments.on('click', '.comment_answer', function(e){
-        e.preventDefault();
-
-        var form = comments.find('form');
-        comments.find('#add_comment_button').remove();
-        $(this).parent().after(form);
-        var margin = (parseInt(form.prev().data('level')) * 50) + 'px';
-        form.addClass('form_answer');
-        form.css('marginLeft', margin);
-        $(this).parent().parent().prepend('<a href="#" id="add_comment_button">Добавить комментарий</a><a href="#" class="comment_delete"></a>');
-    });
-
-    comments.on('click', '#add_comment_button', function(e){
-        e.preventDefault();
-
-        var form = comments.find('form');
-        form.insertAfter($(this));
-        form.removeClass('form_answer').css('marginLeft', '0');
-        $(this).remove();
-    });
-    
-    // DELETE COMENT - ANSWER
+    // ADD COMMENT - ANSWER
     comments.on('click', '.comment_answer', function(e){
         e.preventDefault();
 
@@ -696,6 +675,13 @@ $(document).ready(function(){
         form.insertAfter($(this));
         form.removeClass('form_answer').css('marginLeft', '0');
         $(this).remove();
+    });
+    
+    // DELETE COMMENT - ANSWER
+    comments.on('click', '.delete_comment', function(e){
+        e.preventDefault();
+
+        
     });
     
     
