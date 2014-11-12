@@ -185,6 +185,7 @@ class MyAjaxController extends Controller
         $session = $this->get('session');
 
         // GETTING USER NAME AND EMAIL FROM SESSION IF ONE IS AUTH
+        $user_id = $session->get('user_id');
         $user_name = $session->get('user_name');
         $user_email = $session->get('user_email');
 
@@ -205,6 +206,9 @@ class MyAjaxController extends Controller
         $comment = new Comment();
         $error = '';
 
+        if(isset($user_id) && !empty($user_id)){
+            $comment->setIdUser($user_id);
+        }
         if(isset($name) && !empty($name) && !is_null($name) ){
             $comment->setName($name);
         }else{
@@ -254,6 +258,4 @@ class MyAjaxController extends Controller
         return new Response(json_encode($response));
     }
 
-
 }
-

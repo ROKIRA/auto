@@ -9,6 +9,9 @@ Auto\MainBundle\Entity\Comment:
         id_auto:
             type: integer
             length: 11
+        id_user:
+            type: integer
+            length: 11
         name:
             type: string
             length: 60

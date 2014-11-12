@@ -664,6 +664,28 @@ $(document).ready(function(){
         var margin = (parseInt(form.prev().data('level')) * 50) + 'px';
         form.addClass('form_answer');
         form.css('marginLeft', margin);
+        $(this).parent().parent().prepend('<a href="#" id="add_comment_button">Добавить комментарий</a><a href="#" class="comment_delete"></a>');
+    });
+
+    comments.on('click', '#add_comment_button', function(e){
+        e.preventDefault();
+
+        var form = comments.find('form');
+        form.insertAfter($(this));
+        form.removeClass('form_answer').css('marginLeft', '0');
+        $(this).remove();
+    });
+    
+    // DELETE COMENT - ANSWER
+    comments.on('click', '.comment_answer', function(e){
+        e.preventDefault();
+
+        var form = comments.find('form');
+        comments.find('#add_comment_button').remove();
+        $(this).parent().after(form);
+        var margin = (parseInt(form.prev().data('level')) * 50) + 'px';
+        form.addClass('form_answer');
+        form.css('marginLeft', margin);
         $(this).parent().parent().prepend('<a href="#" id="add_comment_button">Добавить комментарий</a>');
     });
 

@@ -17,6 +17,16 @@ class AboutAutoController extends Controller
 
         $auto = $repository->findOneById($id);
 
+        // GET USER ID
+        $repository = $this->getDoctrine()
+            ->getRepository('AutoMainBundle:UserAuto');
+        
+        $query = $repository->createQueryBuilder('u')
+        ->where("u.id_auto = $id")
+        ->getQuery();
+        $user = $query->getResult();
+        $user = $user[0];
+        
         $form = $this->createForm(new AddCommentType());
 
         // GET COMMENTS FOR CURRENT CAR FROM DataBase
@@ -35,6 +45,7 @@ class AboutAutoController extends Controller
             'form' => $form->createView(),
             'comments' => $comments,
             'car_id' => $id,
+            'user' => $user,
         ));
 
     }

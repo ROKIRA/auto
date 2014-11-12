@@ -7,6 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Comment
 {
     protected $id_auto;
+    protected $id_user;
     protected $name;
     protected $email;
     protected $text;
@@ -53,6 +54,29 @@ class Comment
         return $this->id_auto;
     }
 
+    /**
+     * Set id_user
+     *
+     * @param \integer $idUser
+     * @return Comment
+     */
+    public function setIdUser($idUser)
+    {
+        $this->id_user = $idUser;
+
+        return $this;
+    }
+
+    /**
+     * Get id_user
+     *
+     * @return \integer
+     */
+    public function getIdUser()
+    {
+        return $this->id_user;
+    }
+    
     /**
      * Set name
      *
