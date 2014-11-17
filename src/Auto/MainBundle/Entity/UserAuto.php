@@ -8,7 +8,8 @@ class UserAuto
 {
     protected $id_user;
     protected $id_auto;
-    protected $date;
+    protected $date_add;
+    protected $date_update;
 
     /**
      * @var integer
@@ -73,25 +74,48 @@ class UserAuto
     }
 
     /**
-     * Set date
+     * Set date_add
      *
-     * @param \DateTime $date
-     * @return UserAuto
+     * @param \DateTime $dateAdd
+     * @return ZayavkaAuto
      */
-    public function setDate($date)
+    public function setDateAdd($dateAdd)
     {
-        $this->date = $date;
+        $this->date_add = $dateAdd;
 
         return $this;
     }
 
     /**
-     * Get date
+     * Get date_add
      *
      * @return \DateTime 
      */
-    public function getDate()
+    public function getDateAdd()
     {
-        return $this->date;
+        return $this->date_add;
+    }
+
+    /**
+     * Set date_update
+     *
+     * @param \DateTime $dateUpdate
+     * @return ZayavkaAuto
+     */
+    public function setDateUpdate($dateUpdate)
+    {
+        $this->date_update = $dateUpdate;
+
+        return $this;
+    }
+
+    /**
+     * Get date_update
+     *
+     * @return \DateTime 
+     */
+    public function getDateUpdate()
+    {
+        return $this->date_update;
     }
 }

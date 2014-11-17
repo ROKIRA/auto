@@ -11,12 +11,15 @@ class ZayavkaAuto
     protected $mark;
     protected $model;
     protected $body;
-    protected $year;
+    protected $year_from;
+    protected $year_to;
     protected $color;
-    protected $run;
+    protected $run_from;
+    protected $run_to;
     protected $new;
     protected $vip;
-    protected $price;
+    protected $price_from;
+    protected $price_to;
     protected $description;
     protected $date_add;
     protected $date_update;
@@ -130,14 +133,37 @@ class ZayavkaAuto
     }
 
     /**
-     * Set year
+     * Set year_from
      *
-     * @param integer $year
+     * @param integer $year_from
      * @return ZayavkaAuto
      */
-    public function setYear($year)
+    public function setYearFrom($year_from)
     {
-        $this->year = $year;
+        $this->year_from = $year_from;
+
+        return $this;
+    }
+
+    /**
+     * Get year_from
+     *
+     * @return integer 
+     */
+    public function getYearFrom()
+    {
+        return $this->year_from;
+    }
+    
+    /**
+     * Set year_to
+     *
+     * @param integer $year_to
+     * @return ZayavkaAuto
+     */
+    public function setYearTo($year_to)
+    {
+        $this->year_to = $year_to;
 
         return $this;
     }
@@ -147,9 +173,9 @@ class ZayavkaAuto
      *
      * @return integer 
      */
-    public function getYear()
+    public function getYearTo()
     {
-        return $this->year;
+        return $this->year_to;
     }
 
     /**
@@ -199,26 +225,49 @@ class ZayavkaAuto
     }
 
     /**
-     * Set run
+     * Set run_from
      *
-     * @param integer $run
+     * @param integer $run_from
      * @return ZayavkaAuto
      */
-    public function setRun($run)
+    public function setRunFrom($run_from)
     {
-        $this->run = $run;
+        $this->run_from = $run_from;
 
         return $this;
     }
 
     /**
-     * Get run
+     * Get run_from
      *
      * @return integer 
      */
-    public function getRun()
+    public function getRunFrom()
     {
-        return $this->run;
+        return $this->run_from;
+    }
+    
+    /**
+     * Set run_to
+     *
+     * @param integer $run_to
+     * @return ZayavkaAuto
+     */
+    public function setRunTo($run_to)
+    {
+        $this->run_to = $run_to;
+
+        return $this;
+    }
+
+    /**
+     * Get run_to
+     *
+     * @return integer 
+     */
+    public function getRunTo()
+    {
+        return $this->run_to;
     }
 
     /**
@@ -268,26 +317,49 @@ class ZayavkaAuto
     }
 
     /**
-     * Set price
+     * Set price_from
      *
-     * @param string $price
+     * @param string $price_from
      * @return ZayavkaAuto
      */
-    public function setPrice($price)
+    public function setPriceFrom($price_from)
     {
-        $this->price = $price;
+        $this->price_from = $price_from;
 
         return $this;
     }
 
     /**
-     * Get price
+     * Get price_from
      *
      * @return string 
      */
-    public function getPrice()
+    public function getPriceFrom()
     {
-        return $this->price;
+        return $this->price_from;
+    }
+
+    /**
+     * Set price_to
+     *
+     * @param string $price_to
+     * @return ZayavkaAuto
+     */
+    public function setPriceTo($price_to)
+    {
+        $this->price_to = $price_to;
+
+        return $this;
+    }
+
+    /**
+     * Get price_to
+     *
+     * @return string 
+     */
+    public function getPriceTo()
+    {
+        return $this->price_to;
     }
 
     /**

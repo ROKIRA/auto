@@ -52,14 +52,21 @@
                             </div>
 
                             <div class="field">
-                                {% if(form_errors(form.year)) %}
-                                    <div class="error">{{ form_errors(form.year) }}</div>
+                                {% if(form_errors(form.year_from)) %}
+                                    <div class="error">{{ form_errors(form.year_from) }}</div>
                                 {% endif %}
-                                {{ form_label(form.year) }}
-                                {{ form_widget(form.year, { 'attr': {'placeholder': 'Год выпуска автомобиля', 'data-year': year} } ) }}
+                                {{ form_label(form.year_from) }}
+                                {{ form_widget(form.year_from, { 'attr': {'placeholder': 'Год выпуска автомобиля', 'data-year': year_from} } ) }}
+                            </div>
+                            <div class="field">
+                                {% if(form_errors(form.year_to)) %}
+                                    <div class="error">{{ form_errors(form.year_to) }}</div>
+                                {% endif %}
+                                {{ form_label(form.year_to) }}
+                                {{ form_widget(form.year_to, { 'attr': {'placeholder': 'Год выпуска автомобиля', 'data-year': year_to} } ) }}
                             </div>
                             <script type="text/javascript">
-                                var year_select =  $('#add_zayavka_auto_year');
+                                var year_select =  $('#add_zayavka_auto_year_from, #add_zayavka_auto_year_to');
                                 var year = year_select.data('year');
                                 if(year != ''){
                                     year_select.find('option:contains('+ year +')').attr('selected', 'selected');
@@ -77,11 +84,18 @@
                             </div>
 
                             <div class="field">
-                                {% if(form_errors(form.run)) %}
-                                    <div class="error">{{ form_errors(form.run) }}</div>
+                                {% if(form_errors(form.run_from)) %}
+                                    <div class="error">{{ form_errors(form.run_from) }}</div>
                                 {% endif %}
-                                {{ form_label(form.run) }}
-                                {{ form_widget(form.run, { 'attr': {'placeholder': 'Пробег автомобиля'} } ) }}
+                                {{ form_label(form.run_from) }}
+                                {{ form_widget(form.run_from, { 'attr': {'placeholder': 'Пробег автомобиля'} } ) }}
+                            </div>
+                            <div class="field">
+                                {% if(form_errors(form.run_to)) %}
+                                    <div class="error">{{ form_errors(form.run_to) }}</div>
+                                {% endif %}
+                                {{ form_label(form.run_to) }}
+                                {{ form_widget(form.run_to, { 'attr': {'placeholder': 'Пробег автомобиля'} } ) }}
                             </div>
 
                             <div class="field color">
@@ -99,11 +113,18 @@
                             </div>
 
                             <div class="field">
-                                {% if(form_errors(form.price)) %}
-                                    <div class="error">{{ form_errors(form.price) }}</div>
+                                {% if(form_errors(form.price_from)) %}
+                                    <div class="error">{{ form_errors(form.price_from) }}</div>
                                 {% endif %}
-                                {{ form_label(form.price) }}
-                                {{ form_widget(form.price, { 'attr': {'placeholder': 'Цена автомобиля'} } ) }}
+                                {{ form_label(form.price_from) }}
+                                {{ form_widget(form.price_from, { 'attr': {'placeholder': 'Цена автомобиля'} } ) }}
+                            </div>
+                            <div class="field">
+                                {% if(form_errors(form.price_to)) %}
+                                    <div class="error">{{ form_errors(form.price_to) }}</div>
+                                {% endif %}
+                                {{ form_label(form.price_to) }}
+                                {{ form_widget(form.price_to, { 'attr': {'placeholder': 'Цена автомобиля'} } ) }}
                             </div>
 
                             <div class="field description_field">

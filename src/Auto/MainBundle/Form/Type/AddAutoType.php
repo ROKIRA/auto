@@ -44,6 +44,9 @@ class AddAutoType extends AbstractType
         $builder->add('new', 'checkbox', array('label' => 'Новый: ', 'required' => false ));
         $builder->add('file', 'file', array('label' => 'Изображение: ', 'required' => false ));
         $builder->add('description', 'textarea', array('label' => 'Описание: '));
+        $builder->add('url', 'url', array('label' => 'URL: '));
+        $builder->add('confiscat', 'checkbox', array('label' => 'Конфискат: '));
+        $builder->add('xRank', 'number', array('label' => 'xRank: '));
 
     }
 

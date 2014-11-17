@@ -25,7 +25,7 @@
                         <div class="previous_car"></div>
                         <div class="body_mini_slider">
                             <div class="mini_slider_items">
-                                {% for i in 1..slidecount_new-1 %}
+                                {% for i in 0..slidecount_new-1 %}
                                     <div class="small_car" id="car-{{ slider_new[i].id }}">
                                         <a href="#"><img src="{{ asset('bundles/auto/userfiles/') }}{{ slider_new[i].img }}" alt="{{ slider_new[i].model }}"/></a>
                                         <p class="info_about_car" data-link="/auto/{{ slider_new[i].id }}/{{ slider_new[i].mark }}-{{ slider_new[i].model }}" data-mark="{{ slider_new[i].mark }}" data-model="{{ slider_new[i].model }}" data-year="{{ slider_new[i].year }}" data-run="{{ slider_new[i].run|number_format(0, '.', ' ') }}" data-price="{{ slider_new[i].price|number_format(0, '.', ' ') }}">{{ slider_new[i].year }} г.в., {{ slider_new[i].run|number_format(0, '.', ' ') }} км, цена: {{ slider_new[i].price|number_format(0, '.', ' ') }} грн</p>
@@ -40,7 +40,7 @@
             </div>
             <div class="items_headers">
                 <div class="headers_slider">
-                    {% for i in 1..slidecount_new-1 %}
+                    {% for i in 0..slidecount_new-1 %}
                         <h3 class="carname"><a href="/auto/{{ slider_new[i].id }}/{{ slider_new[i].mark }}-{{ slider_new[i].model }}"><span class="car_mark">{{ slider_new[i].mark }}</span> <span class="car_model">{{ slider_new[i].model }}</span></a></h3>
                     {% endfor %}
                 </div>
@@ -69,7 +69,7 @@
                             <div class="previous_car"></div>
                             <div class="body_mini_slider">
                                 <div class="mini_slider_items">
-                                    {% for i in 1..slidecount_bu-1 %}
+                                    {% for i in 0..slidecount_bu-1 %}
                                         <div class="small_car" id="car-{{ slider_bu[i].id }}">
                                             <a href="#"><img src="{{ asset('bundles/auto/userfiles/') }}{{ slider_bu[i].img }}" alt="{{ slider_bu[i].model }}"/></a>
                                             <p class="info_about_car" data-link="/auto/{{ slider_bu[i].id }}/{{ slider_bu[i].mark }}-{{ slider_bu[i].model }}" data-mark="{{ slider_bu[i].mark }}" data-model="{{ slider_bu[i].model }}" data-year="{{ slider_bu[i].year }}" data-run="{{ slider_bu[i].run|number_format(0, '.', ' ') }}" data-price="{{ slider_bu[i].price|number_format(0, '.', ' ') }}">{{ slider_bu[i].year }} г.в., {{ slider_bu[i].run|number_format(0, '.', ' ') }} км, цена: {{ slider_bu[i].price|number_format(0, '.', ' ') }} грн</p>
@@ -84,7 +84,7 @@
             </div>
             <div class="items_headers">
                 <div class="headers_slider">
-                    {% for i in 1..slidecount_bu-1 %}
+                    {% for i in 0..slidecount_bu-1 %}
                         <h3 class="carname"><a href="/auto/{{ slider_bu[i].id }}/{{ slider_bu[i].mark }}-{{ slider_bu[i].model }}"><span class="car_mark">{{ slider_bu[i].mark }}</span> <span class="car_model">{{ slider_bu[i].model }}</span></a></h3>
                     {% endfor %}
                 </div>

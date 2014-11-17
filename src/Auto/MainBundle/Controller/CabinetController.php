@@ -25,7 +25,7 @@ class CabinetController extends Controller
             ->getRepository('AutoMainBundle:UserAuto');
         $query = $repository->createQueryBuilder('u')
             ->where("u.id_user = :id")
-            ->orderBy('u.date', 'DESC')
+            ->orderBy('u.date_add', 'DESC')
             ->setParameter('id', $user_id)
             ->getQuery();
         $user_auto = $query->getResult();
@@ -298,9 +298,12 @@ class CabinetController extends Controller
 
                 $old_zayavka->setMark($zayavka->getMark());
                 $old_zayavka->setModel($zayavka->getModel());
-                $old_zayavka->setYear($zayavka->getYear());
-                $old_zayavka->setRun(abs((int)$zayavka->getRun()));
-                $old_zayavka->setPrice(abs((int)$zayavka->getPrice()));
+                $old_zayavka->setYearFrom($zayavka->getYearFrom());
+                $old_zayavka->setYearTo($zayavka->getYearTo());
+                $old_zayavka->setRunFrom(abs((int)$zayavka->getRunFrom()));
+                $old_zayavka->setRunTo(abs((int)$zayavka->getRunTo()));
+                $old_zayavka->setPriceFrom(abs((int)$zayavka->getPriceFrom()));
+                $old_zayavka->setPriceTo(abs((int)$zayavka->getPriceTo()));
                 $old_zayavka->setNew($zayavka->getNew());
                 $old_zayavka->setRegion($zayavka->getRegion());
                 $old_zayavka->setBody($zayavka->getBody());
@@ -326,7 +329,8 @@ class CabinetController extends Controller
                 'region' => $zayavka->getRegion(),
                 'mark' => $zayavka->getMark(),
                 'model' => $zayavka->getModel(),
-                'year' => $zayavka->getYear(),
+                'year_from' => $zayavka->getYearFrom(),
+                'year_to' => $zayavka->getYearTo(),
             ));
         }
 
@@ -338,9 +342,12 @@ class CabinetController extends Controller
 
         $zayavka->setMark($edit_zayavka->getMark());
         $zayavka->setModel($edit_zayavka->getModel());
-        $zayavka->setYear($edit_zayavka->getYear());
-        $zayavka->setRun($edit_zayavka->getRun());
-        $zayavka->setPrice($edit_zayavka->getPrice());
+        $zayavka->setYearFrom($edit_zayavka->getYearFrom());
+        $zayavka->setYearTo($edit_zayavka->getYearTo());
+        $zayavka->setRunFrom($edit_zayavka->getRunFrom());
+        $zayavka->setRunTo($edit_zayavka->getRunTo());
+        $zayavka->setPriceFrom($edit_zayavka->getPriceFrom());
+        $zayavka->setPriceTo($edit_zayavka->getPriceTo());
         $zayavka->setNew($edit_zayavka->getNew());
         $zayavka->setRegion($edit_zayavka->getRegion());
         $zayavka->setBody($edit_zayavka->getBody());
@@ -355,7 +362,8 @@ class CabinetController extends Controller
             'region' => $edit_zayavka->getRegion(),
             'mark' => $edit_zayavka->getMark(),
             'model' => $edit_zayavka->getModel(),
-            'year' => $edit_zayavka->getYear(),
+            'year_from' => $edit_zayavka->getYearFrom(),
+            'year_to' => $edit_zayavka->getYearTo(),
         ));
 
     }

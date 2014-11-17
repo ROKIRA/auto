@@ -25,7 +25,9 @@ class AboutAutoController extends Controller
         ->where("u.id_auto = $id")
         ->getQuery();
         $user = $query->getResult();
-        $user = $user[0];
+        if($user){
+            $user = $user[0]; 
+        }
         
         $form = $this->createForm(new AddCommentType());
 

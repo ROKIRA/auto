@@ -12,6 +12,7 @@ class BaseUser
     protected $phone;
     protected $region;
     protected $city;
+    protected $is_admin;
 
     /**
      * @var integer
@@ -176,4 +177,25 @@ class BaseUser
     {
         return $this->city;
     }
+    
+    /**
+     * Get is_admin
+     *
+     * @return integer 
+     */
+    public function getIsAdmin()
+    {
+        return $this->is_admin;
+    }
+
+    /**
+     * Set is_admin
+     *
+     * @return User
+     */
+    public function setIsAdmin($isAdmin)
+    {
+        return $this->is_admin = $isAdmin;
+    }
+    
 }

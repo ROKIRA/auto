@@ -18,7 +18,10 @@ Auto\MainBundle\Entity\ZayavkaAuto:
         model:
             type: string
             length: 255
-        year:
+        year_from:
+            type: integer
+            length: 4
+        year_to:
             type: integer
             length: 4
         body:
@@ -27,14 +30,20 @@ Auto\MainBundle\Entity\ZayavkaAuto:
         color:
             type: string
             length: 255
-        run:
+        run_from:
+            type: integer
+            length: 10
+        run_to:
             type: integer
             length: 10
         new:
             type: boolean
         vip:
             type: boolean
-        price:
+        price_from:
+            type: decimal
+            scale: 2
+        price_to:
             type: decimal
             scale: 2
         description:

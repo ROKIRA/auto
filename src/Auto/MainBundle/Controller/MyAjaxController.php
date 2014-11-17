@@ -109,9 +109,12 @@ class MyAjaxController extends Controller
             $region = $request->request->get('region');
             $mark = $request->request->get('mark');
             $model = $request->request->get('model');
-            $year = $request->request->get('year');
-            $run = $request->request->get('run');
-            $price = $request->request->get('price');
+            $year_from = $request->request->get('year_from');
+            $year_to = $request->request->get('year_to');
+            $run_from = $request->request->get('run_from');
+            $run_to = $request->request->get('run_to');
+            $price_from = $request->request->get('price_from');
+            $price_to = $request->request->get('price_to');
             $body = $request->request->get('body');
             $color = $request->request->get('color');
             $new = $request->request->get('new_old');
@@ -135,16 +138,27 @@ class MyAjaxController extends Controller
         if(isset($model) && !empty($model) && $model != 'Выберите модель'){
             $zayavka->setModel($model);
         }
-        if(isset($year) && !empty($year) && $year != 'Укажите год выпуска'){
-            $zayavka->setYear($year);
+        if(isset($year_from) && !empty($year_from) && $year_from != 'Укажите год выпуска'){
+            $zayavka->setYearFrom($year_from);
         }
-        if(isset($run) && !empty($run)){
-            $zayavka->setRun(abs((int)$run));
+        if(isset($year_to) && !empty($year_to) && $year_to != 'Укажите год выпуска'){
+            $zayavka->setYearTo($year_to);
+        }
+        if(isset($run_from) && !empty($run_from)){
+            $zayavka->setRunFrom(abs((int)$run_from));
         }else{
-            $zayavka->setRun(0);
+            $zayavka->setRunFrom(0);
         }
-        if(isset($price) && !empty($price)){
-            $zayavka->setPrice(abs((int)$price));
+        if(isset($run_to) && !empty($run_to)){
+            $zayavka->setRunTo(abs((int)$run_to));
+        }else{
+            $zayavka->setRunTo(1000000);
+        }
+        if(isset($price_from) && !empty($price_from)){
+            $zayavka->setPriceFrom(abs((int)$price_from));
+        }
+        if(isset($price_to) && !empty($price_to)){
+            $zayavka->setPriceTo(abs((int)$price_to));
         }
         if(isset($body) && !empty($body)){
             $zayavka->setBody($body);
@@ -158,6 +172,7 @@ class MyAjaxController extends Controller
 
         $zayavka->setUserId($session->get('user_id'));
         $zayavka->setDateAdd(new \DateTime('now'));
+        $zayavka->setDateUpdate(new \DateTime('now'));
 
             $em->persist($zayavka);
             $em->flush();
@@ -167,10 +182,13 @@ class MyAjaxController extends Controller
             'region' => $zayavka->getRegion(),
             'mark' => $zayavka->getMark(),
             'model' => $zayavka->getModel(),
-            'year' => $zayavka->getYear(),
+            'year_from' => $zayavka->getYearFrom(),
+            'year_to' => $zayavka->getYearTo(),
             'body' => $zayavka->getBody(),
-            'price' => $zayavka->getPrice(),
-            'run' => $zayavka->getRun(),
+            'price_from' => $zayavka->getPriceFrom(),
+            'price_to' => $zayavka->getPriceTo(),
+            'run_from' => $zayavka->getRunFrom(),
+            'run_to' => $zayavka->getRunTo(),
             'color' => $zayavka->getColor(),
             'description' => $zayavka->getDescription(),
             'user_id' => $session->get('user_id'));

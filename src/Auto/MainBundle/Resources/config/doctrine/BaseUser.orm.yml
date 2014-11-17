@@ -24,3 +24,6 @@ Auto\MainBundle\Entity\BaseUser:
         city:
             type: string
             length: 255
+        is_admin:
+            type: integer
+            length: 1

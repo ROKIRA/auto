@@ -12,6 +12,9 @@ Auto\MainBundle\Entity\UserAuto:
         id_auto:
             type: integer
             length: 10
-        date:
+        date_add:
+            type: datetime
+            length: 255
+        date_update:
             type: datetime
             length: 255

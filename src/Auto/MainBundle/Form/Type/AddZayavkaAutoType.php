@@ -31,19 +31,27 @@ class AddZayavkaAutoType extends AbstractType
             'label' => 'Модель: ',
             'required' => false
         ));
-        $builder->add('year', 'entity', array(
+        $builder->add('year_from', 'entity', array(
             'class'   => 'AutoMainBundle:CarYear',
             'property' => 'year',
-            'label' => 'Год выпуска: ',
+            'label' => 'Год выпуска от: ',
+            'required' => false
+        ));
+        $builder->add('year_to', 'entity', array(
+            'class'   => 'AutoMainBundle:CarYear',
+            'property' => 'year',
+            'label' => 'до: ',
             'required' => false
         ));
         $builder->add('body', 'choice', array(
             'choices'   => array('any' => 'Любой', 'sedan' => 'Седан', 'coupe' => 'Купе', 'crossover' => 'Внедорожник / Кроссовер', 'minivan' => 'Минивэн', 'hatchback' => 'Хэтчбек', 'universal' => 'Универсал', 'furgon' => 'Легкий фургон (до 1.5т)', 'cabriolet' => 'Кабриолет', 'roadster' => 'Родстер', 'pickup' => 'Пикап', 'limousine' => 'Лимузин', 'other' => 'Другой'),
             'label' => 'Тип кузова: '
         ));
-        $builder->add('run', 'integer', array('label' => 'Пробег: ', 'required' => false));
+        $builder->add('run_from', 'integer', array('label' => 'Пробег от: ', 'required' => false));
+        $builder->add('run_to', 'integer', array('label' => 'до: ', 'required' => false));
         $builder->add('color', 'text', array('label' => 'Цвет: ', 'required' => false));
-        $builder->add('price', 'integer', array('label' => 'Цена: ', 'required' => false));
+        $builder->add('price_from', 'integer', array('label' => 'Цена от: ', 'required' => false));
+        $builder->add('price_to', 'integer', array('label' => 'до: ', 'required' => false));
         $builder->add('new', 'checkbox', array('label' => 'Новый: ', 'required' => false ));
         $builder->add('description', 'textarea', array('label' => 'Описание: ', 'required' => false));
 

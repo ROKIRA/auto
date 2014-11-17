@@ -78,7 +78,7 @@ class __TwigTemplate_46bfb7e40a35c6b55363272b9813e99399d1699226aed053e33aa79042a
                                 ";
             // line 28
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable(range(1, ((isset($context["slidecount_new"]) ? $context["slidecount_new"] : $this->getContext($context, "slidecount_new")) - 1)));
+            $context['_seq'] = twig_ensure_traversable(range(0, ((isset($context["slidecount_new"]) ? $context["slidecount_new"] : $this->getContext($context, "slidecount_new")) - 1)));
             foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
                 // line 29
                 echo "                                    <div class=\"small_car\" id=\"car-";
@@ -134,7 +134,7 @@ class __TwigTemplate_46bfb7e40a35c6b55363272b9813e99399d1699226aed053e33aa79042a
                     ";
             // line 43
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable(range(1, ((isset($context["slidecount_new"]) ? $context["slidecount_new"] : $this->getContext($context, "slidecount_new")) - 1)));
+            $context['_seq'] = twig_ensure_traversable(range(0, ((isset($context["slidecount_new"]) ? $context["slidecount_new"] : $this->getContext($context, "slidecount_new")) - 1)));
             foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
                 // line 44
                 echo "                        <h3 class=\"carname\"><a href=\"/auto/";
@@ -217,7 +217,7 @@ class __TwigTemplate_46bfb7e40a35c6b55363272b9813e99399d1699226aed053e33aa79042a
                                     ";
             // line 72
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable(range(1, ((isset($context["slidecount_bu"]) ? $context["slidecount_bu"] : $this->getContext($context, "slidecount_bu")) - 1)));
+            $context['_seq'] = twig_ensure_traversable(range(0, ((isset($context["slidecount_bu"]) ? $context["slidecount_bu"] : $this->getContext($context, "slidecount_bu")) - 1)));
             foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
                 // line 73
                 echo "                                        <div class=\"small_car\" id=\"car-";
@@ -273,7 +273,7 @@ class __TwigTemplate_46bfb7e40a35c6b55363272b9813e99399d1699226aed053e33aa79042a
                     ";
             // line 87
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable(range(1, ((isset($context["slidecount_bu"]) ? $context["slidecount_bu"] : $this->getContext($context, "slidecount_bu")) - 1)));
+            $context['_seq'] = twig_ensure_traversable(range(0, ((isset($context["slidecount_bu"]) ? $context["slidecount_bu"] : $this->getContext($context, "slidecount_bu")) - 1)));
             foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
                 // line 88
                 echo "                        <h3 class=\"carname\"><a href=\"/auto/";
@@ -315,6 +315,6 @@ class __TwigTemplate_46bfb7e40a35c6b55363272b9813e99399d1699226aed053e33aa79042a
 
     public function getDebugInfo()
     {
-        return array (  301 => 93,  296 => 90,  279 => 88,  275 => 87,  264 => 78,  228 => 74,  223 => 73,  205 => 64,  199 => 61,  195 => 60,  189 => 59,  175 => 57,  168 => 53,  162 => 49,  157 => 46,  140 => 44,  136 => 43,  125 => 34,  89 => 30,  84 => 29,  70 => 21,  60 => 17,  50 => 15,  36 => 13,  31 => 10,  29 => 9,  19 => 1,  245 => 84,  242 => 83,  239 => 82,  235 => 75,  232 => 79,  229 => 78,  225 => 76,  222 => 75,  219 => 72,  215 => 72,  212 => 71,  209 => 65,  198 => 62,  194 => 61,  190 => 60,  183 => 56,  179 => 55,  174 => 53,  170 => 54,  163 => 48,  159 => 47,  154 => 45,  150 => 44,  138 => 35,  134 => 34,  124 => 27,  120 => 26,  110 => 19,  106 => 18,  100 => 15,  96 => 31,  86 => 9,  83 => 8,  80 => 28,  73 => 85,  71 => 82,  68 => 81,  66 => 20,  63 => 77,  61 => 74,  58 => 73,  56 => 16,  53 => 69,  51 => 7,  47 => 5,  44 => 4,  40 => 89,  37 => 4,  34 => 3,);
+        return array (  301 => 93,  296 => 90,  279 => 88,  275 => 87,  264 => 78,  235 => 75,  228 => 74,  223 => 73,  219 => 72,  209 => 65,  205 => 64,  199 => 61,  195 => 60,  189 => 59,  175 => 57,  170 => 54,  168 => 53,  162 => 49,  157 => 46,  140 => 44,  136 => 43,  125 => 34,  96 => 31,  89 => 30,  84 => 29,  80 => 28,  70 => 21,  66 => 20,  60 => 17,  56 => 16,  50 => 15,  36 => 13,  31 => 10,  29 => 9,  19 => 1,);
     }
 }

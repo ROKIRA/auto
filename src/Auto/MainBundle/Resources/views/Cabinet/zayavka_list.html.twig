@@ -19,13 +19,13 @@
                         <li class="myitem">
                             <h3 class="auto_title">{{ z.mark }} {{ z.model }} {% if z.new == 0 %} (б/у) {% endif %}</h3>
                             <p class="info about">
-                                    {% if z.price is null %}
+                                    {% if z.priceFrom is null or z.priceTo is null %}
                                       <span class="null">Цена не указана</span>
                                     {% else %}
-                                        <span class="price">{{ z.price|number_format(0, '.', ' ') }} </span> грн
+                                        <span class="price">Цена от {{ z.priceFrom|number_format(0, '.', ' ') }} до {{ z.priceTo|number_format(0, '.', ' ') }} </span> грн
                                     {% endif %}
                                 <br/>
-                                <a href="/Symfony/web/app_dev.php/zayavka/{{ z.id }}/{{ z.mark }}-{{ z.model }}">Посмотреть</a>
+                                <a href="/app_dev.php/zayavka/{{ z.id }}/{{ z.mark }}-{{ z.model }}">Посмотреть</a>
                                 <a href="{{ path('auto_main_homepage') }}zayavka-edit/{{ z.id }}">Изменить</a>
                             </p>
                         </li>

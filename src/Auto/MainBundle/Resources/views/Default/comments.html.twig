@@ -64,7 +64,7 @@
                 <a class="comment_answer" href="#">Ответить</a>
                 {% if user %}
                     {% if comment.idUser == app.session.get('user_id') or user.id == comment.idUser %}
-                    <a class="comment_delete" href="#">Удалить</a>
+                    <a class="comment_delete" href="#" data-id="{{ comment.id }}">Удалить</a>
                     {% endif %}
                 {% endif %}
             </div>

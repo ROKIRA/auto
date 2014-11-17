@@ -58,7 +58,8 @@ class AddController extends Controller
 
                 $user_auto->setIdAuto($auto->getId());
                 $user_auto->setIdUser($session->get('user_id'));
-                $user_auto->setDate(new \DateTime('now'));
+                $user_auto->setDateAdd(new \DateTime('now'));
+                $user_auto->setDateUpdate(new \DateTime('now'));
 
                 $em->persist($user_auto);
                 $em->flush();

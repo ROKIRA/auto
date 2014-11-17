@@ -42,6 +42,9 @@ class AuthController extends Controller
                 $session->set('user_id', $auth->getId());
                 $session->set('user_name', $auth->getName());
                 $session->set('user_email', $auth->getEmail());
+                if($auth->getIsAdmin() == 1){
+                    $session->set('user_admin', 1);
+                }
             }else{
                 $this->get('session')->getFlashBag()->add(
                     'error',
@@ -59,6 +62,7 @@ class AuthController extends Controller
         $session->remove('user_id');
         $session->remove('user_name');
         $session->remove('user_email');
+        $session->remove('user_admin');
 
         return $this->redirect($request->headers->get('referer'));
     }

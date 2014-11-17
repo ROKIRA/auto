@@ -111,6 +111,28 @@
                                 {{ form_label(form.description) }}
                                 {{ form_widget(form.description, { 'attr': {'cols': '30', 'rows' : '5'} } ) }}
                             </div>
+                            
+                            {% if app.session.get('user_admin') %}
+                                <div class="field">
+                                {% if(form_errors(form.url)) %}
+                                    <div class="error">{{ form_errors(form.url) }}</div>
+                                {% endif %}
+                                {{ form_label(form.url) }}
+                                {{ form_widget(form.url, { 'attr': {'placeholder': 'Ссылка на автомобиль'} } ) }}
+                            </div>
+                            
+                             <div class="field">
+                                {{ form_label(form.confiscat) }}
+                                {{ form_widget(form.confiscat) }}
+                            </div>
+                            
+                             <div class="field">
+                                {{ form_label(form.xRank) }}
+                                {{ form_widget(form.xRank) }}
+                            </div>
+                            
+                            {% endif %}
+                            
 
                             {{ form_row(form._token) }}
 

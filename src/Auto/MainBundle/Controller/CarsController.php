@@ -34,7 +34,7 @@ class CarsController extends Controller
             ->getRepository('AutoMainBundle:Auto');
         $query = $slider_new->createQueryBuilder('s')
             ->where('s.new = 1')
-            ->orderBy('s.id')
+            ->orderBy('s.xRank', 'DESC')
             ->getQuery()
             ->setMaxResults(4);
         $slider_new = $query->getResult();
@@ -50,7 +50,7 @@ class CarsController extends Controller
             ->getRepository('AutoMainBundle:Auto');
         $query = $slider_bu->createQueryBuilder('s')
             ->where('s.new = 0')
-            ->orderBy('s.id')
+            ->orderBy('s.xRank', 'DESC')
             ->getQuery()
             ->setMaxResults(4);
         $slider_bu = $query->getResult();
@@ -98,6 +98,7 @@ class CarsController extends Controller
 
             $query = $auto->createQueryBuilder('a')
                 ->where("$params")
+                ->orderBy('a.xRank', 'DESC')
                 ->getQuery();
 
             $auto = $query->getResult();
@@ -108,6 +109,7 @@ class CarsController extends Controller
             $auto = $this->getDoctrine()
                 ->getRepository('AutoMainBundle:Auto');
             $query = $auto->createQueryBuilder('a')
+                ->orderBy('a.xRank', 'DESC')
                 ->getQuery()
                 ->setFirstResult($start_pos)
                 ->setMaxResults($perpage);

@@ -21,7 +21,11 @@ class Auto
     protected $vip;
     protected $price;
     protected $description;
-   
+    protected $url;
+    protected $confiscat;
+    protected $xRank;
+
+
     /**
      * @var integer
      */
@@ -341,4 +345,76 @@ class Auto
     {
         return $this->vip;
     }
+    
+    /**
+     * Get url
+     *
+     * @return string 
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+    
+    /**
+     * Set url
+     *
+     * @param string $url
+     * @return Auto
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+    
+    /**
+     * Set confiscat
+     *
+     * @param boolean $confiscat
+     * @return Auto
+     */
+    public function setConfiscat($confiscat)
+    {
+        $this->confiscat = $confiscat;
+
+        return $this;
+    }
+
+    /**
+     * Get confiscat
+     *
+     * @return boolean 
+     */
+    public function getConfiscat()
+    {
+        return $this->confiscat;
+    }
+    
+    
+    /**
+     * Set xRank
+     *
+     * @param int $xRank
+     * @return Auto
+     */
+    public function setXRank($xRank)
+    {
+        $this->xRank = $xRank;
+
+        return $this;
+    }
+
+    /**
+     * Get xRank
+     *
+     * @return int 
+     */
+    public function getXRank()
+    {
+        return $this->xRank;
+    }
+    
+    
 }

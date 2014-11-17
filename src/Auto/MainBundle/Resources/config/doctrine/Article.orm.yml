@@ -19,5 +19,7 @@ Auto\MainBundle\Entity\Article:
         type:
             type: string
             length: 50
-        date:
+        date_add:
+            type: datetime
+        date_update:
             type: datetime

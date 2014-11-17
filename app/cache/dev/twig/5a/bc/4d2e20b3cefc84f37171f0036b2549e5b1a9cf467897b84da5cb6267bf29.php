@@ -139,136 +139,203 @@ class __TwigTemplate_5abc4d2e20b3cefc84f37171f0036b2549e5b1a9cf467897b84da5cb626
                                 <div class=\"field\">
                                     ";
             // line 63
-            if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "year"), 'errors')) {
+            if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "year_from"), 'errors')) {
                 // line 64
                 echo "                                        <div class=\"error\">";
-                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "year"), 'errors');
+                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "year_from"), 'errors');
                 echo "</div>
                                     ";
             }
             // line 66
             echo "                                    ";
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "year"), 'label');
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "year_from"), 'label');
             echo "
                                     ";
             // line 67
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "year"), 'widget', array("attr" => array("placeholder" => "Год выпуска автомобиля")));
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "year_from"), 'widget', array("attr" => array("placeholder" => "Год выпуска автомобиля")));
             echo "
                                 </div>
                                 <script type=\"text/javascript\">
-                                    \$('#add_zayavka_auto_year').empty().prepend('<option value=\"0\" selected>Укажите год выпуска</option>');
+                                    \$('#add_zayavka_auto_year_from').empty().prepend('<option value=\"0\" selected>Укажите год выпуска</option>');
                                 </script>
 
                                 <div class=\"field\">
                                     ";
             // line 74
-            if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "body"), 'errors')) {
+            if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "year_to"), 'errors')) {
                 // line 75
                 echo "                                        <div class=\"error\">";
-                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "body"), 'errors');
+                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "year_to"), 'errors');
                 echo "</div>
                                     ";
             }
             // line 77
             echo "                                    ";
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "body"), 'label');
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "year_to"), 'label');
             echo "
                                     ";
             // line 78
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "year_to"), 'widget', array("attr" => array("placeholder" => "Год выпуска автомобиля")));
+            echo "
+                                </div>
+                                <script type=\"text/javascript\">
+                                    \$('#add_zayavka_auto_year_to').empty().prepend('<option value=\"0\" selected>Укажите год выпуска</option>');
+                                </script>
+
+                                <div class=\"field\">
+                                    ";
+            // line 85
+            if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "body"), 'errors')) {
+                // line 86
+                echo "                                        <div class=\"error\">";
+                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "body"), 'errors');
+                echo "</div>
+                                    ";
+            }
+            // line 88
+            echo "                                    ";
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "body"), 'label');
+            echo "
+                                    ";
+            // line 89
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "body"), 'widget', array("attr" => array("placeholder" => "Тип кузова: ")));
             echo "
                                 </div>
 
                                 <div class=\"field\">
                                     ";
-            // line 82
-            if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "run"), 'errors')) {
-                // line 83
-                echo "                                        <div class=\"error\">";
-                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "run"), 'errors');
-                echo "</div>
-                                    ";
-            }
-            // line 85
-            echo "                                    ";
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "run"), 'label');
-            echo "
-                                    ";
-            // line 86
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "run"), 'widget', array("attr" => array("placeholder" => "Пробег автомобиля")));
-            echo "
-                                </div>
-                                <div class=\"field color\">
-                                    ";
-            // line 89
-            if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "color"), 'errors')) {
-                // line 90
-                echo "                                        <div class=\"error\">";
-                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "color"), 'errors');
-                echo "</div>
-                                    ";
-            }
-            // line 92
-            echo "                                    ";
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "color"), 'label');
-            echo "
-                                    ";
             // line 93
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "color"), 'widget', array("attr" => array("placeholder" => "Цвет автомобиля", "class" => "add_zayavka_color_field")));
+            if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "run_from"), 'errors')) {
+                // line 94
+                echo "                                        <div class=\"error\">";
+                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "run_from"), 'errors');
+                echo "</div>
+                                    ";
+            }
+            // line 96
+            echo "                                    ";
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "run_from"), 'label');
             echo "
-                                    <span class=\"color_box\"></span>
-                                </div>
-                                <div class=\"field\">
                                     ";
             // line 97
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "new"), 'label');
-            echo "
-                                    ";
-            // line 98
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "new"), 'widget');
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "run_from"), 'widget', array("attr" => array("placeholder" => "Пробег автомобиля")));
             echo "
                                 </div>
+                                
                                 <div class=\"field\">
                                     ";
             // line 101
-            if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "price"), 'errors')) {
+            if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "run_to"), 'errors')) {
                 // line 102
                 echo "                                        <div class=\"error\">";
-                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "price"), 'errors');
+                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "run_to"), 'errors');
                 echo "</div>
                                     ";
             }
             // line 104
             echo "                                    ";
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "price"), 'label');
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "run_to"), 'label');
             echo "
                                     ";
             // line 105
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "price"), 'widget', array("attr" => array("placeholder" => "Цена автомобиля")));
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "run_to"), 'widget', array("attr" => array("placeholder" => "Пробег автомобиля")));
             echo "
                                 </div>
+                                
+                                <div class=\"field color\">
+                                    ";
+            // line 109
+            if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "color"), 'errors')) {
+                // line 110
+                echo "                                        <div class=\"error\">";
+                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "color"), 'errors');
+                echo "</div>
+                                    ";
+            }
+            // line 112
+            echo "                                    ";
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "color"), 'label');
+            echo "
+                                    ";
+            // line 113
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "color"), 'widget', array("attr" => array("placeholder" => "Цвет автомобиля", "class" => "add_zayavka_color_field")));
+            echo "
+                                    <span class=\"color_box\"></span>
+                                </div>
+                                    
+                                <div class=\"field\">
+                                    ";
+            // line 118
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "new"), 'label');
+            echo "
+                                    ";
+            // line 119
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "new"), 'widget');
+            echo "
+                                </div>
+                                
+                                <div class=\"field\">
+                                    ";
+            // line 123
+            if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "price_from"), 'errors')) {
+                // line 124
+                echo "                                        <div class=\"error\">";
+                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "price_from"), 'errors');
+                echo "</div>
+                                    ";
+            }
+            // line 126
+            echo "                                    ";
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "price_from"), 'label');
+            echo "
+                                    ";
+            // line 127
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "price_from"), 'widget', array("attr" => array("placeholder" => "Цена автомобиля")));
+            echo "
+                                </div>
+                                
+                                <div class=\"field\">
+                                    ";
+            // line 131
+            if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "price_to"), 'errors')) {
+                // line 132
+                echo "                                        <div class=\"error\">";
+                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "price_to"), 'errors');
+                echo "</div>
+                                    ";
+            }
+            // line 134
+            echo "                                    ";
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "price_to"), 'label');
+            echo "
+                                    ";
+            // line 135
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "price_to"), 'widget', array("attr" => array("placeholder" => "Цена автомобиля")));
+            echo "
+                                </div>
+                                
                                 <div class=\"field description_field\">
                                     ";
-            // line 108
+            // line 139
             if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "description"), 'errors')) {
-                // line 109
+                // line 140
                 echo "                                        <div class=\"error\">";
                 echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "description"), 'errors');
                 echo "</div>
                                     ";
             }
-            // line 111
+            // line 142
             echo "                                    ";
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "description"), 'label');
             echo "
                                     ";
-            // line 112
+            // line 143
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "description"), 'widget', array("attr" => array("cols" => "30", "rows" => "5")));
             echo "
                                 </div>
 
                                 ";
-            // line 115
+            // line 146
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form_zayavka"]) ? $context["form_zayavka"] : $this->getContext($context, "form_zayavka")), "_token"), 'row');
             echo "
 
@@ -280,11 +347,11 @@ class __TwigTemplate_5abc4d2e20b3cefc84f37171f0036b2549e5b1a9cf467897b84da5cb626
                     </form>
                 ";
         } else {
-            // line 124
+            // line 155
             echo "                    <p class=\"notice\">Для добавления заявки необходимо авторизоваться!</p>
                 ";
         }
-        // line 126
+        // line 157
         echo "            </div>
 
         </div>
@@ -305,6 +372,6 @@ class __TwigTemplate_5abc4d2e20b3cefc84f37171f0036b2549e5b1a9cf467897b84da5cb626
 
     public function getDebugInfo()
     {
-        return array (  288 => 126,  284 => 124,  272 => 115,  266 => 112,  261 => 111,  255 => 109,  253 => 108,  247 => 105,  236 => 102,  234 => 101,  224 => 97,  217 => 93,  206 => 90,  204 => 89,  193 => 85,  187 => 83,  185 => 82,  178 => 78,  173 => 77,  167 => 75,  165 => 74,  155 => 67,  144 => 64,  142 => 63,  132 => 56,  127 => 55,  121 => 53,  119 => 52,  109 => 45,  104 => 44,  98 => 42,  81 => 33,  75 => 31,  59 => 24,  52 => 22,  43 => 19,  41 => 18,  24 => 4,  301 => 93,  296 => 90,  279 => 88,  275 => 87,  264 => 78,  228 => 98,  223 => 73,  205 => 64,  199 => 61,  195 => 60,  189 => 59,  175 => 57,  168 => 53,  162 => 49,  157 => 46,  140 => 44,  136 => 43,  125 => 34,  89 => 30,  84 => 29,  70 => 21,  60 => 17,  50 => 15,  36 => 13,  31 => 10,  29 => 9,  19 => 1,  245 => 84,  242 => 104,  239 => 82,  235 => 75,  232 => 79,  229 => 78,  225 => 76,  222 => 75,  219 => 72,  215 => 72,  212 => 92,  209 => 65,  198 => 86,  194 => 61,  190 => 60,  183 => 56,  179 => 55,  174 => 53,  170 => 54,  163 => 48,  159 => 47,  154 => 45,  150 => 66,  138 => 35,  134 => 34,  124 => 27,  120 => 26,  110 => 19,  106 => 18,  100 => 15,  96 => 41,  86 => 34,  83 => 8,  80 => 28,  73 => 30,  71 => 82,  68 => 27,  66 => 20,  63 => 77,  61 => 74,  58 => 73,  56 => 23,  53 => 69,  51 => 7,  47 => 5,  44 => 4,  40 => 89,  37 => 4,  34 => 3,);
+        return array (  355 => 157,  351 => 155,  339 => 146,  333 => 143,  328 => 142,  322 => 140,  320 => 139,  313 => 135,  308 => 134,  302 => 132,  300 => 131,  293 => 127,  288 => 126,  282 => 124,  280 => 123,  273 => 119,  269 => 118,  261 => 113,  256 => 112,  250 => 110,  248 => 109,  241 => 105,  236 => 104,  230 => 102,  228 => 101,  221 => 97,  216 => 96,  210 => 94,  208 => 93,  201 => 89,  196 => 88,  190 => 86,  188 => 85,  178 => 78,  173 => 77,  167 => 75,  165 => 74,  155 => 67,  150 => 66,  144 => 64,  142 => 63,  132 => 56,  127 => 55,  121 => 53,  119 => 52,  109 => 45,  104 => 44,  98 => 42,  96 => 41,  86 => 34,  81 => 33,  75 => 31,  73 => 30,  68 => 27,  59 => 24,  56 => 23,  52 => 22,  43 => 19,  41 => 18,  24 => 4,  19 => 1,);
     }
 }

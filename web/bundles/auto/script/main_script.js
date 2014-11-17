@@ -220,7 +220,7 @@ $(document).ready(function(){
     // YEAR FIELD
         zayavka_form.on('change', '#add_zayavka_auto_model', function(){
             if($(this).val() != '0'){
-                var year_select = $("#add_zayavka_auto_year");
+                var year_select = $("#add_zayavka_auto_year_from, #add_zayavka_auto_year_to");
                 year_select.attr('disabled', 'disabled');
 
                 var url = $(this).data('url');
@@ -238,9 +238,11 @@ $(document).ready(function(){
                 var region = $("#add_zayavka_auto_region option:selected").text();
                 var mark = $("#add_zayavka_auto_mark option:selected").text();
                 var model = $("#add_zayavka_auto_model option:selected").text();
-                var year = $("#add_zayavka_auto_year option:selected").text();
+                var year_from = $("#add_zayavka_auto_year_from option:selected").text();
+                var year_to = $("#add_zayavka_auto_year_to option:selected").text();
                 var body = $("#add_zayavka_auto_body").val();
-                var run = $("#add_zayavka_auto_run").val();
+                var run_from = $("#add_zayavka_auto_run_from").val();
+                var run_to = $("#add_zayavka_auto_run_to").val();
                 var color = $("#add_zayavka_auto_color").val();
                 var new_old;
                 if($("#add_zayavka_auto_new").prop("checked")){
@@ -248,7 +250,8 @@ $(document).ready(function(){
                 }else{
                     new_old = '0';
                 }
-                var price = $("#add_zayavka_auto_price").val();
+                var price_from = $("#add_zayavka_auto_price_from").val();
+                var price_to = $("#add_zayavka_auto_price_to").val();
                 var description = $("#add_zayavka_auto_description").val();
                 var url = $("#form_zayavka").attr('action');
 
@@ -258,11 +261,14 @@ $(document).ready(function(){
                         region: region,
                         mark: mark,
                         model: model,
-                        year: year,
+                        year_from: year_from,
+                        year_to: year_to,
                         body: body,
-                        run: run,
+                        run_from: run_from,
+                        run_to: run_to,
                         color: color,
-                        price: price,
+                        price_from: price_from,
+                        price_to: price_to,
                         new_old: new_old,
                         description: description
                     },

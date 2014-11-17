@@ -93,6 +93,7 @@ class FilterAutoController extends Controller
 
             $query = $auto->createQueryBuilder('a')
                           ->where("$params")
+                          ->orderBy('a.xRank', 'DESC')
                           ->getQuery();
 
             $auto = $query->getResult();

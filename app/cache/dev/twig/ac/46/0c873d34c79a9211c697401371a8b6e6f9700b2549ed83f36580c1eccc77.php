@@ -20,9 +20,9 @@ class __TwigTemplate_ac460c873d34c79a9211c697401371a8b6e6f9700b2549ed83f36580c1e
 <section class=\"auth_form auth\">
     ";
         // line 3
-        if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "get", array(0 => "user_name"), "method")) {
+        if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "get", array(0 => "user_admin"), "method")) {
             // line 4
-            echo "        <p>Добро пожаловать, <span>";
+            echo "        <p>Добро пожаловать, <span>Admin ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "get", array(0 => "user_name"), "method"), "html", null, true);
             echo "</span></p>
         <p><a href=\"";
@@ -31,8 +31,21 @@ class __TwigTemplate_ac460c873d34c79a9211c697401371a8b6e6f9700b2549ed83f36580c1e
             echo "\" id=\"goto_cabinet\">Кабинет</a></p>
         <p><a href=\"/logout\" id=\"logout\">Выйти</a></p>
     ";
-        } else {
+        } elseif ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "get", array(0 => "user_name"), "method")) {
+            // line 7
+            echo "    
+        <p>Добро пожаловать, <span>";
             // line 8
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "get", array(0 => "user_name"), "method"), "html", null, true);
+            echo "</span></p>
+        <p><a href=\"";
+            // line 9
+            echo $this->env->getExtension('routing')->getPath("cabinet");
+            echo "\" id=\"goto_cabinet\">Кабинет</a></p>
+        <p><a href=\"/logout\" id=\"logout\">Выйти</a></p>
+    ";
+        } else {
+            // line 12
             echo "        <p id=\"auth\">
             <a href=\"#\" id=\"auth_enter\">Войти</a>
             или
@@ -42,45 +55,45 @@ class __TwigTemplate_ac460c873d34c79a9211c697401371a8b6e6f9700b2549ed83f36580c1e
             <div class=\"auth_form_header\"><h3>Авторизация</h3><p id=\"auth_form_close\">X</p></div>
             
             <form action=\"";
-            // line 16
+            // line 20
             echo $this->env->getExtension('routing')->getPath("auth");
             echo "\" method=\"post\" ";
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), 'enctype');
             echo ">
 
                 ";
-            // line 18
+            // line 22
             if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "email"), 'errors')) {
-                // line 19
+                // line 23
                 echo "                    <div class=\"error\">";
                 echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "email"), 'errors');
                 echo "</div>
                 ";
             }
-            // line 21
+            // line 25
             echo "                ";
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "email"), 'label');
             echo "
                 ";
-            // line 22
+            // line 26
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "email"), 'widget');
             echo "
 
                 ";
-            // line 24
+            // line 28
             if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "password"), 'errors')) {
-                // line 25
+                // line 29
                 echo "                    <div class=\"error\">";
                 echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "password"), 'errors');
                 echo "</div>
                 ";
             }
-            // line 27
+            // line 31
             echo "                ";
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "password"), 'label');
             echo "
                 ";
-            // line 28
+            // line 32
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "password"), 'widget');
             echo "
 
@@ -88,7 +101,7 @@ class __TwigTemplate_ac460c873d34c79a9211c697401371a8b6e6f9700b2549ed83f36580c1e
             </form>
                 
             <p><a href=\"";
-            // line 33
+            // line 37
             echo $this->env->getExtension('routing')->getPath("reg");
             echo "\">Зарегестрироваться</a></p>
         
@@ -96,7 +109,7 @@ class __TwigTemplate_ac460c873d34c79a9211c697401371a8b6e6f9700b2549ed83f36580c1e
 
     ";
         }
-        // line 38
+        // line 42
         echo "
 </section>
 <br class=\"clear\"/>
@@ -116,6 +129,6 @@ class __TwigTemplate_ac460c873d34c79a9211c697401371a8b6e6f9700b2549ed83f36580c1e
 
     public function getDebugInfo()
     {
-        return array (  84 => 28,  79 => 27,  73 => 25,  66 => 22,  55 => 19,  53 => 18,  36 => 8,  30 => 5,  25 => 4,  23 => 3,  19 => 1,  243 => 91,  240 => 90,  236 => 86,  233 => 85,  228 => 79,  225 => 78,  219 => 81,  217 => 78,  213 => 76,  210 => 75,  204 => 87,  202 => 85,  199 => 84,  197 => 75,  191 => 73,  187 => 50,  184 => 49,  181 => 48,  166 => 51,  164 => 48,  145 => 31,  142 => 30,  136 => 17,  132 => 16,  128 => 15,  123 => 14,  120 => 13,  114 => 10,  110 => 9,  105 => 8,  102 => 7,  96 => 6,  85 => 96,  82 => 90,  80 => 73,  76 => 71,  71 => 24,  69 => 67,  63 => 63,  48 => 19,  46 => 16,  41 => 12,  39 => 7,  103 => 26,  100 => 38,  97 => 24,  92 => 33,  90 => 24,  86 => 22,  81 => 19,  74 => 15,  70 => 14,  65 => 12,  61 => 21,  57 => 10,  50 => 9,  37 => 6,  35 => 6,  32 => 4,  29 => 2,);
+        return array (  113 => 42,  105 => 37,  97 => 32,  92 => 31,  86 => 29,  84 => 28,  79 => 26,  74 => 25,  68 => 23,  66 => 22,  59 => 20,  49 => 12,  43 => 9,  39 => 8,  36 => 7,  30 => 5,  25 => 4,  23 => 3,  19 => 1,);
     }
 }

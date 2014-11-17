@@ -40,3 +40,9 @@ Auto\MainBundle\Entity\Auto:
             scale: 2
         description:
             type: text
+        url:
+            type: string
+        confiscat:
+            type: boolean
+        xRank:
+            type: integer

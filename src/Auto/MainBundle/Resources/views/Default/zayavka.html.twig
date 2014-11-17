@@ -60,14 +60,25 @@
                                 </script>
 
                                 <div class="field">
-                                    {% if(form_errors(form_zayavka.year)) %}
-                                        <div class="error">{{ form_errors(form.year) }}</div>
+                                    {% if(form_errors(form_zayavka.year_from)) %}
+                                        <div class="error">{{ form_errors(form.year_from) }}</div>
                                     {% endif %}
-                                    {{ form_label(form_zayavka.year) }}
-                                    {{ form_widget(form_zayavka.year, { 'attr': {'placeholder': 'Год выпуска автомобиля'} } ) }}
+                                    {{ form_label(form_zayavka.year_from) }}
+                                    {{ form_widget(form_zayavka.year_from, { 'attr': {'placeholder': 'Год выпуска автомобиля'} } ) }}
                                 </div>
                                 <script type="text/javascript">
-                                    $('#add_zayavka_auto_year').empty().prepend('<option value="0" selected>Укажите год выпуска</option>');
+                                    $('#add_zayavka_auto_year_from').empty().prepend('<option value="0" selected>Укажите год выпуска</option>');
+                                </script>
+
+                                <div class="field">
+                                    {% if(form_errors(form_zayavka.year_to)) %}
+                                        <div class="error">{{ form_errors(form.year_to) }}</div>
+                                    {% endif %}
+                                    {{ form_label(form_zayavka.year_to) }}
+                                    {{ form_widget(form_zayavka.year_to, { 'attr': {'placeholder': 'Год выпуска автомобиля'} } ) }}
+                                </div>
+                                <script type="text/javascript">
+                                    $('#add_zayavka_auto_year_to').empty().prepend('<option value="0" selected>Укажите год выпуска</option>');
                                 </script>
 
                                 <div class="field">
@@ -79,12 +90,21 @@
                                 </div>
 
                                 <div class="field">
-                                    {% if(form_errors(form_zayavka.run)) %}
-                                        <div class="error">{{ form_errors(form.run) }}</div>
+                                    {% if(form_errors(form_zayavka.run_from)) %}
+                                        <div class="error">{{ form_errors(form.run_from) }}</div>
                                     {% endif %}
-                                    {{ form_label(form_zayavka.run) }}
-                                    {{ form_widget(form_zayavka.run, { 'attr': {'placeholder': 'Пробег автомобиля'} } ) }}
+                                    {{ form_label(form_zayavka.run_from) }}
+                                    {{ form_widget(form_zayavka.run_from, { 'attr': {'placeholder': 'Пробег автомобиля'} } ) }}
                                 </div>
+                                
+                                <div class="field">
+                                    {% if(form_errors(form_zayavka.run_to)) %}
+                                        <div class="error">{{ form_errors(form.run_to) }}</div>
+                                    {% endif %}
+                                    {{ form_label(form_zayavka.run_to) }}
+                                    {{ form_widget(form_zayavka.run_to, { 'attr': {'placeholder': 'Пробег автомобиля'} } ) }}
+                                </div>
+                                
                                 <div class="field color">
                                     {% if(form_errors(form_zayavka.color)) %}
                                         <div class="error">{{ form_errors(form.color) }}</div>
@@ -93,17 +113,28 @@
                                     {{ form_widget(form_zayavka.color, { 'attr': { 'placeholder': 'Цвет автомобиля', 'class': 'add_zayavka_color_field'} } ) }}
                                     <span class="color_box"></span>
                                 </div>
+                                    
                                 <div class="field">
                                     {{ form_label(form_zayavka.new) }}
                                     {{ form_widget(form_zayavka.new) }}
                                 </div>
+                                
                                 <div class="field">
-                                    {% if(form_errors(form_zayavka.price)) %}
-                                        <div class="error">{{ form_errors(form_zayavka.price) }}</div>
+                                    {% if(form_errors(form_zayavka.price_from)) %}
+                                        <div class="error">{{ form_errors(form_zayavka.price_from) }}</div>
                                     {% endif %}
-                                    {{ form_label(form_zayavka.price) }}
-                                    {{ form_widget(form_zayavka.price, { 'attr': {'placeholder': 'Цена автомобиля'} } ) }}
+                                    {{ form_label(form_zayavka.price_from) }}
+                                    {{ form_widget(form_zayavka.price_from, { 'attr': {'placeholder': 'Цена автомобиля'} } ) }}
                                 </div>
+                                
+                                <div class="field">
+                                    {% if(form_errors(form_zayavka.price_to)) %}
+                                        <div class="error">{{ form_errors(form_zayavka.price_to) }}</div>
+                                    {% endif %}
+                                    {{ form_label(form_zayavka.price_to) }}
+                                    {{ form_widget(form_zayavka.price_to, { 'attr': {'placeholder': 'Цена автомобиля'} } ) }}
+                                </div>
+                                
                                 <div class="field description_field">
                                     {% if(form_errors(form_zayavka.description)) %}
                                         <div class="error">{{ form_errors(form_zayavka.description) }}</div>

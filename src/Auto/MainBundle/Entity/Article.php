@@ -11,7 +11,11 @@ class Article
     protected $image;
     protected $is_active;
     protected $type;
-    protected $date;
+    protected $date_add;
+    protected $date_update;
+    protected $is_test_drive;
+    
+    
     /**
      * @var integer
      */
@@ -144,25 +148,72 @@ class Article
     }
 
     /**
-     * Set date
+     * Set date_add
      *
-     * @param \DateTime $date
+     * @param \DateTime $date_add
      * @return Article
      */
-    public function setDate($date)
+    public function setDateAdd($date_add)
     {
-        $this->date = $date;
+        $this->date_add = $date_add;
 
         return $this;
     }
 
     /**
-     * Get date
+     * Get date_add
      *
      * @return \DateTime 
      */
-    public function getDate()
+    public function getDateAdd()
     {
-        return $this->date;
+        return $this->date_add;
     }
+    
+    /**
+     * Set date_update
+     *
+     * @param \DateTime $date_update
+     * @return Article
+     */
+    public function setDateUpdate($date_update)
+    {
+        $this->date_update = $date_update;
+
+        return $this;
+    }
+
+    /**
+     * Get date_update
+     *
+     * @return \DateTime 
+     */
+    public function getDateUpdate()
+    {
+        return $this->date_update;
+    }
+    
+    /**
+     * Set is_test_drive
+     *
+     * @param boolean $isTestDrive
+     * @return Article
+     */
+    public function setIsTestDrive($isTestDrive)
+    {
+        $this->is_test_drive = $isTestDrive;
+
+        return $this;
+    }
+
+    /**
+     * Get is_test_drive
+     *
+     * @return boolean 
+     */
+    public function getIsTestDrive()
+    {
+        return $this->is_test_drive;
+    }
+    
 }

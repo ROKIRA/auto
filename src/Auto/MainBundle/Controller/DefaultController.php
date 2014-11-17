@@ -18,8 +18,8 @@ class DefaultController extends Controller
             $slider_new = $this->getDoctrine()
                 ->getRepository('AutoMainBundle:Auto');
             $query = $slider_new->createQueryBuilder('s')
-                ->where('s.new = 1')
-                ->orderBy('s.id')
+                ->where('s.new = 1 AND s.vip = 1')
+                ->orderBy('s.xRank')
                 ->getQuery();
             $slider_new = $query->getResult();
 
@@ -33,8 +33,8 @@ class DefaultController extends Controller
         $slider_bu = $this->getDoctrine()
             ->getRepository('AutoMainBundle:Auto');
         $query = $slider_bu->createQueryBuilder('s')
-            ->where('s.new = 0')
-            ->orderBy('s.id')
+            ->where('s.new = 0 AND s.vip = 1')
+            ->orderBy('s.xRank')
             ->getQuery();
         $slider_bu = $query->getResult();
 
