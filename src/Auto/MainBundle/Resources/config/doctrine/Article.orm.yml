@@ -23,3 +23,5 @@ Auto\MainBundle\Entity\Article:
             type: datetime
         date_update:
             type: datetime
+        is_test_drive:
+            type: boolean

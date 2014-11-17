@@ -49,7 +49,7 @@ class DefaultController extends Controller
             ->getRepository('AutoMainBundle:Article');
         $query = $repository->createQueryBuilder('n')
             ->where("n.is_active = 1")
-            ->orderBy('n.date', 'DESC')
+            ->orderBy('n.date_update', 'DESC')
             ->getQuery();
         $news = $query->getResult();
 

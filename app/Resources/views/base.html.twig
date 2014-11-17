@@ -37,7 +37,7 @@
                             <li><a href="#">Автозапчасти</a></li>
                             <li><a href="#">Тест-драйв</a></li>
                             <li><a href="#">Новинки</a></li>
-                            <li><a href="#">Предложения</a></li>
+                            <li><strong><a href="#">TOP</a></strong></li>
                         </ul>
                     </nav>
                     <!--<p id="auth">
@@ -56,7 +56,7 @@
                     <p>За последние <strong>24</strong> часа</p>
                     <p>добавлено <strong>256</strong> объявлений</p>
                 </div>
-                <a href="#">+ добавить объявление</a>
+                <a href="{% if app.session.get('user_name') %}/add-auto"{% else %}javascript:void(0)" onclick="return false;"{% endif %}>+ добавить объявление</a>
             </section>
         </header>
         {% endblock %}
