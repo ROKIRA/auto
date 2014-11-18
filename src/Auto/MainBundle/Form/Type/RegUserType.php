@@ -14,7 +14,7 @@ class RegUserType extends AbstractType
         $builder->add('password', 'password', array('label' => 'Пароль: '));
         $builder->add('password2', 'password', array('label' => 'Повторите пароль: '));
         $builder->add('name', 'text', array('label' => 'Имя: '));
-        $builder->add('phone', 'text', array('label' => 'Телефон: '));
+        $builder->add('phone', 'tel', array('label' => 'Телефон: '));
         $builder->add('region', 'entity', array(
             'class'   => 'AutoMainBundle:Region',
             'query_builder' => function(EntityRepository $er) {

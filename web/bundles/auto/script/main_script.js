@@ -59,6 +59,8 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 $(document).ready(function(){
 
     $('body').fadeIn(1300);
+    $('input[type=tel]').mask('+38 (000) 000-00-00');
+    
 
     var auth_enter_btn_open = $('#auth_enter');
     var auth_enter_btn_close = $('#auth_form_close');

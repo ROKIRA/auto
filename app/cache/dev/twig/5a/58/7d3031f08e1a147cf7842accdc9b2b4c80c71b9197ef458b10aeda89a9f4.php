@@ -133,7 +133,7 @@ class __TwigTemplate_5a587d3031f08e1a147cf7842accdc9b2b4c80c71b9197ef458b10aeda8
         echo "\"></script>
         <script type=\"text/javascript\" src=\"";
         // line 17
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/auto/script/jquery.lightbox_me.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/auto/script/jquery.mask.js"), "html", null, true);
         echo "\"></script>
     ";
     }
