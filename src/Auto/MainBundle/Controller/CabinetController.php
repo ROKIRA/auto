@@ -367,6 +367,28 @@ class CabinetController extends Controller
         ));
 
     }
+    
+    
+    public function userListAction() {
+        
+        $session = $this->get('session');
+        
+        $repository = $this->getDoctrine()
+            ->getRepository('AutoMainBundle:BaseUser');
+        $users = $repository->findAll();
+        
+        if($session->get('user_admin')){
+            return $this->render('AutoMainBundle:Cabinet:user_list.html.twig',
+            array(
+                'users' => $users,
+            ));
+        }else{
+            return $this->redirect($this->generateUrl('auto_main_homepage'));
+        }
+        
+        
+
+    }
 
 }
 

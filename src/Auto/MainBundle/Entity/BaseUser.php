@@ -13,6 +13,7 @@ class BaseUser
     protected $region;
     protected $city;
     protected $is_admin;
+    protected $balance;
 
     /**
      * @var integer
@@ -197,5 +198,27 @@ class BaseUser
     {
         return $this->is_admin = $isAdmin;
     }
+    
+    
+    /**
+     * Get balance
+     *
+     * @return float 
+     */
+    public function getBalance()
+    {
+        return $this->balance;
+    }
+
+    /**
+     * Set id
+     *
+     * @return User
+     */
+    public function setBalance($balance)
+    {
+        return $this->balance = $balance;
+    }
+    
     
 }

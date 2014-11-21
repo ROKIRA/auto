@@ -65,41 +65,57 @@ class __TwigTemplate_03db7acc6fcc4b4e277fe9e4038f5cc9259e4c5760982d5e86047005963
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["auto"]) ? $context["auto"] : $this->getContext($context, "auto")), "color"), "html", null, true);
             echo "\"></span> </p>
             <script type=\"text/javascript\"> \$(\".color_box\").css('background', \$('.color_box').data('hex')); </script>
+            
+            <p>
+                ";
+            // line 16
+            if ((!(null === $this->getAttribute((isset($context["auto"]) ? $context["auto"] : $this->getContext($context, "auto")), "url")))) {
+                // line 17
+                echo "                    <button>Связаться с консультантом</button>
+                ";
+            } else {
+                // line 19
+                echo "                    <button>Связаться с продавцом</button>
+                ";
+            }
+            // line 21
+            echo "            </p>
+            
             <article class=\"description\">";
-            // line 14
+            // line 23
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["auto"]) ? $context["auto"] : $this->getContext($context, "auto")), "description"), "html", null, true);
             echo "</article>
             <p class=\"info clearfix\"><span>Цена:</span>  <span class=\"price\">";
-            // line 15
+            // line 24
             echo twig_escape_filter($this->env, twig_number_format_filter($this->env, $this->getAttribute((isset($context["auto"]) ? $context["auto"] : $this->getContext($context, "auto")), "price"), 0, ".", " "), "html", null, true);
             echo "</span> грн </p>
         </div>
 
         ";
         } else {
-            // line 19
+            // line 28
             echo "        <h2 class=\"page_title\">Ошибка!!!</h2>
         <p class=\"not_find\">Нет запрашиваемого автомобиля!!!</p>
         ";
         }
-        // line 22
+        // line 31
         echo "
         <hr/>
     ";
-        // line 24
+        // line 33
         $this->displayBlock('comments', $context, $blocks);
-        // line 27
+        // line 36
         echo "
     ";
     }
 
-    // line 24
+    // line 33
     public function block_comments($context, array $blocks = array())
     {
-        // line 25
+        // line 34
         echo "        ";
         $this->env->loadTemplate("AutoMainBundle:Default:comments.html.twig")->display($context);
-        // line 26
+        // line 35
         echo "    ";
     }
 
@@ -115,6 +131,6 @@ class __TwigTemplate_03db7acc6fcc4b4e277fe9e4038f5cc9259e4c5760982d5e86047005963
 
     public function getDebugInfo()
     {
-        return array (  103 => 26,  100 => 25,  97 => 24,  92 => 27,  90 => 24,  86 => 22,  81 => 19,  74 => 15,  70 => 14,  65 => 12,  61 => 11,  57 => 10,  50 => 9,  37 => 6,  35 => 5,  32 => 4,  29 => 3,);
+        return array (  119 => 35,  116 => 34,  113 => 33,  108 => 36,  106 => 33,  102 => 31,  97 => 28,  90 => 24,  86 => 23,  82 => 21,  78 => 19,  74 => 17,  72 => 16,  65 => 12,  61 => 11,  57 => 10,  50 => 9,  37 => 6,  35 => 5,  32 => 4,  29 => 3,);
     }
 }

@@ -27,3 +27,6 @@ Auto\MainBundle\Entity\BaseUser:
         is_admin:
             type: integer
             length: 1
+        balance:
+            type: float
+            length: 1

@@ -4,7 +4,9 @@
             <li><a href="{{ path('change_profile') }}">Изменить пофиль</a></li>
             <li><a href="{{ path('cabinet') }}">Мои объявления</a></li>
             <li><a href="{{ path('zayavka_list') }}">Мои заявки на авто</a></li>
-            <li><a href="#">Как попасть в ТОП</a></li>
+            {% if app.session.get('user_admin') %}
+                <li><a href="{{ path('user_list') }}">Пользователи</a></li>
+            {% endif %}
         </ul>
     </section>
 

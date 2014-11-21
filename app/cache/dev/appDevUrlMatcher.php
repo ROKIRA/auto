@@ -286,6 +286,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // user_list
+        if (rtrim($pathinfo, '/') === '/user-list') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'user_list');
+            }
+
+            return array (  '_controller' => 'Auto\\MainBundle\\Controller\\CabinetController::userListAction',  '_route' => 'user_list',);
+        }
+
         if (0 === strpos($pathinfo, '/login')) {
             // login
             if ($pathinfo === '/login') {

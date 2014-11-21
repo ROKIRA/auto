@@ -38,14 +38,18 @@ class __TwigTemplate_ac460c873d34c79a9211c697401371a8b6e6f9700b2549ed83f36580c1e
             // line 8
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "get", array(0 => "user_name"), "method"), "html", null, true);
             echo "</span></p>
-        <p><a href=\"";
+        <p><strong>Баланс: </strong>";
             // line 9
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session"), "get", array(0 => "user_balance"), "method"), "html", null, true);
+            echo "</p>
+        <p><a href=\"";
+            // line 10
             echo $this->env->getExtension('routing')->getPath("cabinet");
             echo "\" id=\"goto_cabinet\">Кабинет</a></p>
         <p><a href=\"/logout\" id=\"logout\">Выйти</a></p>
     ";
         } else {
-            // line 12
+            // line 13
             echo "        <p id=\"auth\">
             <a href=\"#\" id=\"auth_enter\">Войти</a>
             или
@@ -55,45 +59,45 @@ class __TwigTemplate_ac460c873d34c79a9211c697401371a8b6e6f9700b2549ed83f36580c1e
             <div class=\"auth_form_header\"><h3>Авторизация</h3><p id=\"auth_form_close\">X</p></div>
             
             <form action=\"";
-            // line 20
+            // line 21
             echo $this->env->getExtension('routing')->getPath("auth");
             echo "\" method=\"post\" ";
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), 'enctype');
             echo ">
 
                 ";
-            // line 22
+            // line 23
             if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "email"), 'errors')) {
-                // line 23
+                // line 24
                 echo "                    <div class=\"error\">";
                 echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "email"), 'errors');
                 echo "</div>
                 ";
             }
-            // line 25
+            // line 26
             echo "                ";
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "email"), 'label');
             echo "
                 ";
-            // line 26
+            // line 27
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "email"), 'widget');
             echo "
 
                 ";
-            // line 28
+            // line 29
             if ($this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "password"), 'errors')) {
-                // line 29
+                // line 30
                 echo "                    <div class=\"error\">";
                 echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "password"), 'errors');
                 echo "</div>
                 ";
             }
-            // line 31
+            // line 32
             echo "                ";
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "password"), 'label');
             echo "
                 ";
-            // line 32
+            // line 33
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["auth_form"]) ? $context["auth_form"] : $this->getContext($context, "auth_form")), "password"), 'widget');
             echo "
 
@@ -101,7 +105,7 @@ class __TwigTemplate_ac460c873d34c79a9211c697401371a8b6e6f9700b2549ed83f36580c1e
             </form>
                 
             <p><a href=\"";
-            // line 37
+            // line 38
             echo $this->env->getExtension('routing')->getPath("reg");
             echo "\">Зарегестрироваться</a></p>
         
@@ -109,7 +113,7 @@ class __TwigTemplate_ac460c873d34c79a9211c697401371a8b6e6f9700b2549ed83f36580c1e
 
     ";
         }
-        // line 42
+        // line 43
         echo "
 </section>
 <br class=\"clear\"/>
@@ -129,6 +133,6 @@ class __TwigTemplate_ac460c873d34c79a9211c697401371a8b6e6f9700b2549ed83f36580c1e
 
     public function getDebugInfo()
     {
-        return array (  113 => 42,  105 => 37,  97 => 32,  92 => 31,  86 => 29,  84 => 28,  79 => 26,  74 => 25,  68 => 23,  66 => 22,  59 => 20,  49 => 12,  43 => 9,  39 => 8,  36 => 7,  30 => 5,  25 => 4,  23 => 3,  19 => 1,);
+        return array (  117 => 43,  109 => 38,  101 => 33,  90 => 30,  88 => 29,  83 => 27,  78 => 26,  72 => 24,  70 => 23,  53 => 13,  47 => 10,  43 => 9,  36 => 7,  30 => 5,  25 => 4,  23 => 3,  19 => 1,  250 => 91,  247 => 90,  243 => 86,  240 => 85,  235 => 79,  232 => 78,  226 => 81,  224 => 78,  220 => 76,  217 => 75,  211 => 87,  209 => 85,  206 => 84,  204 => 75,  198 => 73,  194 => 50,  191 => 49,  188 => 48,  176 => 59,  166 => 51,  164 => 48,  145 => 31,  142 => 30,  136 => 17,  132 => 16,  128 => 15,  123 => 14,  120 => 13,  114 => 10,  110 => 9,  105 => 8,  102 => 7,  96 => 32,  85 => 96,  82 => 90,  80 => 73,  76 => 71,  71 => 68,  69 => 67,  63 => 21,  61 => 30,  48 => 19,  46 => 13,  41 => 12,  39 => 8,  35 => 6,  29 => 2,);
     }
 }
