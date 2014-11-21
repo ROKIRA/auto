@@ -1,6 +1,0 @@
-1a1859,127.0.0.1,GET,http://auto/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DAutoMainBundle%253AAuth%253Aindex,1416490851,71c7b4
-71c7b4,127.0.0.1,GET,http://auto/app_dev.php/auto/33/BMW-M3%20(E92)/,1416490851,
-506cf2,127.0.0.1,GET,http://auto/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DAutoMainBundle%253AAuth%253Aindex,1416490864,2dda27
-2dda27,127.0.0.1,POST,http://auto/app_dev.php/auto/33/BMW-M3%20(E92)/,1416490864,
-950c85,127.0.0.1,GET,http://auto/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DAutoMainBundle%253AAuth%253Aindex,1416490865,fe0272
-fe0272,127.0.0.1,POST,http://auto/app_dev.php/auto/33/BMW-M3%20(E92)/,1416490865,
