@@ -1,0 +1,48 @@
+{% extends "::base.html.twig" %}
+
+    {% block leftbar %}
+        {% include 'AutoMainBundle:Cabinet:cabmenu.html.twig' %}
+    {% endblock %}
+
+    {% block content %}
+    
+        {% if app.session.get('user_admin') %}
+        
+        <div class="content">
+            <h2 class="page_title">Зарегестрированные пользователи</h2>
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="success">
+                    {{ flashMessage }}
+                </div>
+            {% endfor %}
+            {% if(users) %}
+                <ul class="list">
+                    {% for user in users %}
+                        <li class="myitem">
+                            <h3 class="auto_title">Пользователь {{ user.name }} </h3>
+                            <p class="info about">
+                                    
+                                <a href="{{ path('auto_main_homepage') }}user-edit/{{ user.id }}">Изменить</a>
+                            </p>
+                        </li>
+                        <br class="clear"/>
+                    {% endfor %}
+                </ul>
+
+
+                {# {% block pagination %}
+                     {% include 'AutoMainBundle:Default:pagination.html.twig' %}
+                 {% endblock %}#}
+
+            {% else %}
+                <p>Заявок пока нет!</p>
+                <p><a href="{{ path('auto_new') }}">Добавить объявление</a></p>
+            {% endif %}
+
+        </div><!-- .content -->
+
+        {% else %}
+            <meta http-equiv="refresh" content="0;URL=/">
+        {% endif %}
+
+    {% endblock %}

@@ -6,6 +6,7 @@
         <p><a href="/logout" id="logout">Выйти</a></p>
     {% elseif app.session.get('user_name') %}    
         <p>Добро пожаловать, <span>{{ app.session.get('user_name') }}</span></p>
+        <p><strong>Баланс: </strong>{{ app.session.get('user_balance') }}</p>
         <p><a href="{{ path('cabinet') }}" id="goto_cabinet">Кабинет</a></p>
         <p><a href="/logout" id="logout">Выйти</a></p>
     {% else %}

@@ -71,12 +71,19 @@ zayavka_list:
 zayavka_edit:
   pattern: /zayavka-edit/{id}
   defaults: { _controller: AutoMainBundle:Cabinet:editZayavka }
+  
+user_list:
+  pattern: /user-list/
+  defaults: { _controller: AutoMainBundle:Cabinet:userList }
+  
 
 login:
     pattern:   /login
     defaults:  { _controller: AutoMainBundle:Security:login }
 login_check:
     pattern:   /login_check
+
+
 
 admin_panel:
     path: /admin

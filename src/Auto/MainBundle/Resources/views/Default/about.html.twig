@@ -11,6 +11,15 @@
             <p class="info"><span>Пробег:</span> {{ auto.run|number_format(0, '.', ' ') }} км</p>
             <p class="info"><span>Цвет:</span> <span class="color_box" data-hex="#{{ auto.color }}"></span> </p>
             <script type="text/javascript"> $(".color_box").css('background', $('.color_box').data('hex')); </script>
+            
+            <p>
+                {% if auto.url is not null %}
+                    <button>Связаться с консультантом</button>
+                {% else %}
+                    <button>Связаться с продавцом</button>
+                {% endif %}
+            </p>
+            
             <article class="description">{{ auto.description }}</article>
             <p class="info clearfix"><span>Цена:</span>  <span class="price">{{ auto.price|number_format(0, '.', ' ') }}</span> грн </p>
         </div>
@@ -21,8 +30,20 @@
         {% endif %}
 
         <hr/>
-    {% block comments %}
-        {% include 'AutoMainBundle:Default:comments.html.twig' %}
-    {% endblock %}
+        {% block comments %}
+            {% include 'AutoMainBundle:Default:comments.html.twig' %}
+        {% endblock %}
 
+    {% endblock %}
+    
+    
+    {% block call_window %}
+        <section id="call_window_wrap">
+            <section id="call_window">
+                <div class="window_header"></div>
+                <div class="window_body">
+                    
+                </div>
+            </section>
+        </section>
     {% endblock %}

@@ -44,6 +44,9 @@ class AuthController extends Controller
                 $session->set('user_email', $auth->getEmail());
                 if($auth->getIsAdmin() == 1){
                     $session->set('user_admin', 1);
+                }else{
+                    $balance = $auth->getBalance() != NULL ? $auth->getBalance() : 0;
+                    $session->set('user_balance', $balance.' UAH');
                 }
             }else{
                 $this->get('session')->getFlashBag()->add(
