@@ -82,13 +82,14 @@ footer{
 }
 /*-------------------------------header*/
 header .logo{
-    padding: 12px 0;
     float: left;
     margin-right: 10px;
 }
 header .logo a{
     color: #787878;
     text-decoration: none;
+    padding: 12px 0;
+    display: block;
 }
 header .header_top{
     background: #f9f9f9; /* Old browsers */
@@ -209,7 +210,7 @@ header .slider a:hover{
 }
 /*--------------------------------------------------*/
 
-/*-----------------------------------------form auth*/
+/*-----------------------------------------navigation*/
 .navigation {
     margin: -18px 0 20px;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -259,39 +260,95 @@ header .slider a:hover{
 /*--------------------------------------------------*/
 
 /*-----------------------------------------form auth*/
+header .auth_form{
+    width: 310px;
+    float: right;
+}
+header .auth_form p{
+    font-size: 13px;
+    color: #787878;
+}
+header .auth_form p:nth-last-child(1){
+    float: right;
+}
+header .auth_form p:nth-last-child(2){
+    float: left;
+}
+header .auth_form p a{
+    color: #4068a3;
+    font-weight: bold;
+}
+header .auth_form p span{
+    color: #4C6FB2;
+    font-weight: bold;
+}
+/*--------------------------------------------------*/
+
+/*-----------------------------------------form auth*/
 #auth_form{
     position: fixed;
     top: 45%;
     left: 50%;
     z-index: 99999;
-    background: #EFEFEF;
     width: 440px;
     margin-top: -100px;
     margin-left: -220px;
     text-align: center;
-    box-shadow: 1px 1px 1px 1px #666;
-    -webkit-box-shadow: 1px 1px 1px 1px #666;
+    border-radius: 7px;
     display: none;
 }
 #auth_form form{
-    width: 225px;
+    width: 250px;
     margin: 0 auto;
     text-align: left;
 }
+#auth_form .auth_form_header{
+    color: #7eaef2;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+#auth_form .auth_form_header h3{
+    float: left;
+    font-size: 17px;
+}
+#auth_form .auth_form_header p{
+    text-align: right;
+}
+#auth_form .auth_form_header p:hover{
+    cursor: pointer;
+    color: #FFB901;
+}
 .auth_form input[type=email],
 .auth_form input[type=password]{
-    border: 3px solid #4465a8;
-    width: 220px;
-    height: 35px;
+    width: 250px;
+    height: 40px;
     margin-bottom: 10px;
     background: #fff;
+    border-radius: 5px;
+    border: 1px solid #5f87cb;
+    padding: 5px 10px;
     font-size: 14px;
-    padding: 7px;
     color: #777777;
 }
+.auth_form input[type=submit]{
+    padding: 10px 45px;
+    margin-left: 60px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 2px 5px 2px rgba(133, 169, 220, 1);
+    border: 0;
+    cursor: pointer;
+}
 .auth_form label{
-    margin: 0 0 2px 6px;
-    color: #0088cc;
+    margin: 0 0 3px 6px;
+    color: #fff;
+    display: inline-block;
+}
+#auth_form>p{
+    margin: 10px 0;
 }
 .auth_form1 input[type=submit]{
     padding: 7px;
@@ -326,15 +383,18 @@ header .slider a:hover{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006fd1', endColorstr='#0088cc',GradientType=0 ); /* IE6-8 */
 
 }
-.auth_form p a{
-    color: #0088CC;
+#auth_form p a{
+    color: #fff;
     text-decoration: none;
     font-size: 12px;
 }
-.auth_form p a:hover{
+#auth_form p a:hover{
     text-decoration: underline;
 }
-.auth_form .loading{
+#auth_form p:nth-last-child(1) {
+    float: none;
+}
+#auth_form .loading{
     display: inline-block;
     width: 18px;
     height: 18px;
@@ -428,15 +488,19 @@ header .slider a:hover{
     border-radius: 5px;
     border: 1px solid #5f87cb;
     padding: 5px;
+    color: #777777;
 }
-.filter input[type="checkbox"] + label {
+.filter input[type="checkbox"] + label,
+.add_form input[type="checkbox"] + label {
     cursor: pointer;
     color: #fff;
 }
-.filter input[type="checkbox"] {
+.filter input[type="checkbox"],
+.add_form input[type="checkbox"]{
     display:none;
 }
-.filter input[type="checkbox"] + label:before {
+.filter input[type="checkbox"] + label:before,
+.add_form input[type="checkbox"] + label:before {
     content: '';
     display:inline-block;
     width:19px;
@@ -446,7 +510,8 @@ header .slider a:hover{
     background:url('../images/checkbox.png') 0 0 no-repeat;
     cursor:pointer;
 }
-.filter input[type="checkbox"]:checked + label:before {
+.filter input[type="checkbox"]:checked + label:before,
+.add_form input[type="checkbox"]:checked + label:before {
     background:url('../images/checkbox.png') 0 -22px no-repeat;
 }
 .filter input[type='submit']{
@@ -623,7 +688,7 @@ header .slider a:hover{
 }
 
 .add_auto, .reg {
-    float: left;
+    text-align: center;
     padding: 10px;
     font-size: 18px;
 }
@@ -632,28 +697,81 @@ header .slider a:hover{
     padding: 10px;
     font-size: 18px;
 }
+.add_form select{
+    width: 450px;
+    height: 55px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #5f87cb;
+    margin: 3px 0 7px;
+    padding: 5px;
+    color: #777;
+    font-size: 15px;
+}
+.add_form input[type=text],
+.add_form input[type=password],
+.add_form input[type=email],
+.add_form input[type=tel],
+.add_form input[type=number]{
+    width: 450px;
+    height: 55px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #5f87cb;
+    padding: 5px;
+    color: #777777;
+}
+.add_form input[type='submit']{
+    padding: 10px 45px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 2px 5px 2px rgba(133, 169, 220, 1);
+    border: 0;
+    cursor: pointer;
+}
+.add_form textarea{
+    width: 450px;
+    height: 145px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #5f87cb;
+    padding: 10px;
+    color: #777777;
+}
+.add_form .loaded_auto img{
+    max-width: 450px;
+}
 .field {
     clear:both;
-    text-align:right;
     line-height:35px;
 }
 .field input[type=checkbox]{
     text-align: left;
 }
 .add_form label {
-    padding-right:40px;
+    display: block;
+    color: #fff;
 }
 .field input, textarea{
-    width: 400px;
+    /*width: 400px;*/
 }
 .field select{
-    width: 404px;
+    /*width: 404px;*/
 }
 
 .add_form fieldset{
     border: 1px solid #5d617f;
-    background: #ffffff;
     padding: 10px;
+    background: #7eaef2;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #7eaef2 0%, #4161a4 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7eaef2), color-stop(100%,#4161a4));
+    background: -webkit-linear-gradient(top, #7eaef2 0%,#4161a4 100%);
+    background: -o-linear-gradient(top, #7eaef2 0%,#4161a4 100%);
+    background: -ms-linear-gradient(top, #7eaef2 0%,#4161a4 100%);
+    background: linear-gradient(to bottom, #7eaef2 0%,#4161a4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7eaef2', endColorstr='#4161a4',GradientType=0 );
+    border-radius: 7px;
 }
     .add_form legend{
         margin-left: 30px;
@@ -947,7 +1065,7 @@ header .slider a:hover{
                     .large_car img{
                         display: inline-block;
                         border: 4px solid #FFF;
-                        max-width: 383px;
+                        max-width: 375px;
                         min-width: 300px;
                         max-height: 242px;
                         vertical-align: bottom;
@@ -1049,6 +1167,7 @@ header .slider a:hover{
     width: 335px;
     padding: 15px;
     text-align: justify;
+    border-radius: 5px 5px 10px 10px;
 }
     .zayavka h2{
         color: #7eaef2;
@@ -1105,6 +1224,7 @@ header .slider a:hover{
 
     /* ARTICLES AND NEWS */
 .news{
+    border-radius: 5px 5px 10px 10px;
     padding: 10px;
     margin-bottom: 20px;
     box-sizing: content-box;
@@ -1135,6 +1255,9 @@ header .slider a:hover{
         .all_news_block .actions_left{
             float: left;
         }
+            .all_news_block .actions_left .news_block{
+                width: 625px;
+            }
         .all_news_block .actions_right{
             float: right;
             width: 370px;
@@ -1145,6 +1268,7 @@ header .slider a:hover{
         }
             .all_news_block .actions_right article{
                 margin-bottom: 10px;
+                font-size: 15px;
             }
             .all_news_block .actions_right h4{
                 font-size: 25px;
@@ -1183,6 +1307,8 @@ header .slider a:hover{
                         border: 5px solid #FFF;
                     }
     .all_news{
+        display: block;
+        text-align: right;
         text-decoration: none;
         color: #FFFFFF;
         font-size: 12px;

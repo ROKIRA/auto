@@ -13,9 +13,9 @@
         <p id="auth">
             <a href="#" id="auth_enter">Войти</a>
             или
-            <a href="#">Зарегестрироваться</a>
+            <a href="{{ path('reg') }}">Зарегестрироваться</a>
         </p>
-        <section  id="auth_form">
+        <section  id="auth_form" class="gradient_blue">
             <div class="auth_form_header"><h3>Авторизация</h3><p id="auth_form_close">X</p></div>
             
             <form action="{{ path('auth') }}" method="post" {{ form_enctype(auth_form) }}>

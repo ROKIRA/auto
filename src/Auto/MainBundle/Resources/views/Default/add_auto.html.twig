@@ -65,25 +65,26 @@
                                 {{ form_label(form.body) }}
                                 {{ form_widget(form.body, { 'attr': {'placeholder': 'Тип кузова: '} } ) }}
                             </div>
-
-                            <div class="field">
-                                {% if(form_errors(form.run)) %}
-                                    <div class="error">{{ form_errors(form.run) }}</div>
-                                {% endif %}
-                                {{ form_label(form.run) }}
-                                {{ form_widget(form.run, { 'attr': {'placeholder': 'Пробег автомобиля'} } ) }}
+                            <div>
+                                <div class="field run">
+                                    {% if(form_errors(form.run)) %}
+                                        <div class="error">{{ form_errors(form.run) }}</div>
+                                    {% endif %}
+                                    {{ form_label(form.run) }}
+                                    {{ form_widget(form.run, { 'attr': {'placeholder': 'Пробег автомобиля'} } ) }}
+                                </div>
+                                <div class="field color">
+                                    {% if(form_errors(form.color)) %}
+                                        <div class="error">{{ form_errors(form.color) }}</div>
+                                    {% endif %}
+                                    {{ form_label(form.color) }}
+                                    {{ form_widget(form.color, { 'attr': { 'placeholder': 'Цвет автомобиля'} } ) }}
+                                    <span class="color_box"></span>
+                                </div>
                             </div>
-                            <div class="field color">
-                                {% if(form_errors(form.color)) %}
-                                    <div class="error">{{ form_errors(form.color) }}</div>
-                                {% endif %}
-                                {{ form_label(form.color) }}
-                                {{ form_widget(form.color, { 'attr': { 'placeholder': 'Цвет автомобиля'} } ) }}
-                                <span class="color_box"></span>
-                            </div>
                             <div class="field">
-                                {{ form_label(form.new) }}
                                 {{ form_widget(form.new) }}
+                                {{ form_label(form.new) }}
                             </div>
                             
                             <div class="loaded_auto">
